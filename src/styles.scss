@@ -1,12 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import "mixins.scss";
-@include font-face(Inconsolata, "assets/fonts/Inconsolata-Regular", null, null, ttf);
-@include font-face(Inconsolata, "assets/fonts/Inconsolata-Bold", bold, null, ttf);
-@include font-face(Archivo, "assets/fonts/Archivo-Medium", null, null, ttf);
-@include font-face(Archivo, "assets/fonts/Archivo-Bold", bold, null, ttf);
-@include font-face(Archivo, "assets/fonts/Archivo-Italic", null, italic, ttf);
-@include font-face(Archivo, "assets/fonts/Archivo-BoldItalic", bold, italic, ttf);
-@include font-face(Lalezar, "assets/fonts/Lalezar-Regular", bold, null, ttf);
+@import "theme-blue.scss";
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+pre, code {
+    font-family: Inconsolata, monospace;
+}
