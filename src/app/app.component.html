@@ -1,5 +1,25 @@
-<h1>Hello, world!</h1>
-<p>How are <b>you</b> doing?</p>
-<code>Here, have some code!</code>
+<mat-toolbar>
+    <a href="https://crmyers.dev"
+       class="header-title"
+       matTooltip="Is it clich&eacute;d? Yes. Does it look cool? Yeah!"
+       matTooltipShowDelay="1500">
+        || CRMYERS.DEV ||
+    </a>
+
+    <button mat-button [matMenuTriggerFor]="codeMenu">Computers &amp; Code</button>
+    <mat-menu #codeMenu="matMenu"></mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="artMenu">Art 'n' Stuff</button>
+    <mat-menu #artMenu></mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="gamesMenu">Random Game Things</button>
+    <mat-menu #gamesMenu></mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="photosMenu">Travel photos</button>
+    <mat-menu #photosMenu></mat-menu>
+
+    <button mat-button>Interesting Links &amp; Stuff I Like</button>
+    <button mat-button>Contact</button>
+</mat-toolbar>
 
 <router-outlet></router-outlet>

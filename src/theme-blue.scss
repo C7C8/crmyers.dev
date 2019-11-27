@@ -12,6 +12,9 @@
 @include font-face(Archivo, "assets/fonts/Archivo-Italic", null, italic, ttf);
 @include font-face(Archivo, "assets/fonts/Archivo-BoldItalic", bold, italic, ttf);
 @include font-face(Lalezar, "assets/fonts/Lalezar-Regular", bold, null, ttf);
+@include font-face(DotMatrix, "assets/fonts/DOTMATRI", null, null, ttf);
+@include font-face(DotMatrix, "assets/fonts/DOTMBold", bold, null, ttf);
+@include font-face(MaterialIcon, "assets/fonts/MaterialIcons-Regular", null, null, woff2);
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -97,8 +100,8 @@ $light-bg-darker-10:  darken($light-background, 10%);
 $light-bg-darker-20:  darken($light-background, 20%);
 $light-bg-darker-30:  darken($light-background, 30%);
 $light-bg-lighter-5:  lighten($light-background, 5%);
-$dark-bg-alpha-4:     rgba(#0c0d0d, 0.04);
-$dark-bg-alpha-12:    rgba(#0c0d0d, 0.12);
+$dark-bg-alpha-4:     rgba(#181b1b, 0.04);
+$dark-bg-alpha-12:    rgba(#181b1b, 0.12);
 
 $mat-light-theme-background: (
     background:               $light-background,
@@ -118,7 +121,7 @@ $mat-light-theme-background: (
 );
 
 // Dark bg
-$dark-background:     #0c0d0d;
+$dark-background:     #181b1b;
 $dark-bg-lighter-5:   lighten($dark-background, 5%);
 $dark-bg-lighter-10:  lighten($dark-background, 10%);
 $dark-bg-lighter-20:  lighten($dark-background, 20%);
@@ -240,3 +243,4 @@ $altTheme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
     padding: .5em .85em;
     min-height: 2.5em;
 }
+
