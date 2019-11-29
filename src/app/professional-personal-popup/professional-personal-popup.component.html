@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="title-pane">
+        <h1>Hello! I haven't seen you before...</h1>
+        <p>Which are you interested in seeing?</p>
+    </div>
+
+    <mat-card class="professional-view">
+        <div>
+            <h2>I'm a professional, show me your professional stuff!</h2>
+            <img src="/assets/img/manager.png" alt="Manager clip art"/>
+        </div>
+        <button mat-raised-button color="primary" (click)="selectProfessional()">To the online resume!</button>
+    </mat-card>
+
+    <mat-card class="human-view">
+        <div>
+            <h2>I'm someone else, show me your personal stuff!</h2>
+            <img src="/assets/img/crowd.png" alt="Crowd clip art"/>
+        </div>
+        <button mat-raised-button color="primary" (click)="selectPersonal()">To the personal site!</button>
+    </mat-card>
+
+    <div class="description-pane">
+        <p>This site has a <em>lot</em> of things on it, and I know your time is important. If you're here
+        for professional purposes, I've provided a condensed, interactive online resume for you.</p>
+
+        <p>I'll remember your decision in the future and take you there automatically. Don't worry, you can
+        always switch between them!</p>
+
+    </div>
+</div>

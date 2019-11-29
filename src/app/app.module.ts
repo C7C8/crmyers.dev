@@ -2,14 +2,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { PersonalHomeComponent } from './personal/personal-home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatMenuModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
+import {
+    MatProgressSpinnerModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatDialogModule, MatCardModule
+} from '@angular/material';
+import { ProfessionalPersonalPopupComponent } from './professional-personal-popup/professional-personal-popup.component';
+import { LoaderComponent } from './loader.component';
+import { ProfessionalComponent } from './professional/professional.component';
+import { RootComponent } from './root.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+    declarations: [
+        LoaderComponent,
+        PersonalHomeComponent,
+        ProfessionalPersonalPopupComponent,
+        ProfessionalComponent,
+        RootComponent,
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
@@ -17,9 +32,13 @@ import { MatButtonModule, MatMenuModule, MatToolbarModule, MatTooltipModule } fr
         MatToolbarModule,
         MatTooltipModule,
         MatMenuModule,
-        MatButtonModule
+        MatButtonModule,
+        MatProgressSpinnerModule,
+        MatDialogModule,
+        MatCardModule
     ],
-  providers: [],
-  bootstrap: [AppComponent]
+    entryComponents: [ ProfessionalPersonalPopupComponent ],
+    providers: [],
+    bootstrap: [ RootComponent ]
 })
 export class AppModule { }

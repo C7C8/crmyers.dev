@@ -1,0 +1,59 @@
+h2 {
+    display: block;
+    text-align: center;
+    max-width: 100%;
+}
+
+button {
+    margin: 1em auto 0 auto;
+}
+
+.container {
+    display: grid;
+    grid-template: 1fr 7fr 2fr / 1fr 1fr;
+    grid-gap: 1em;
+    grid-template-areas:
+        "title title"
+        "professional human "
+        "description description";
+    height: 100%;
+
+    .title-pane {
+        grid-area: title;
+        text-align: center;
+        font-size: 1.5em;
+        h1 {
+            font-family: Lalezar, sans-serif;
+            font-size: 2.5em;
+        }
+    }
+
+    .professional-view {
+        text-align: center;
+        grid-area: professional;
+        display: grid;
+        grid-template-rows: 7fr 1fr;
+
+        img {
+            max-width: 33%;
+        }
+    }
+
+    .human-view {
+        text-align: center;
+        grid-area: human;
+        display: grid;
+        grid-template-rows: 7fr 1fr;
+
+        img {
+            max-width: 85%;
+        }
+    }
+
+    .description-pane {
+        grid-area: description;
+        font-size: 1.3em;
+        text-align: center;
+        padding: 0 25%
+    }
+}
