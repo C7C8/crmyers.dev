@@ -20,14 +20,11 @@ export class LoaderComponent implements AfterViewInit {
       });
 
       const result: string = await dialogRef.afterClosed().toPromise();
-      console.log('Got result ' + result);
 
       if (result === 'personal') {
           this.router.navigate(['/personal']);
-          console.log('How did I get here?');
       } else {
           this.router.navigate(['/professional']);
-          console.log('How did I get here, professional?');
       }
     }
 

@@ -10,7 +10,6 @@ export class ProfessionalComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-      console.log('Made it to personal home');
   }
 
 }

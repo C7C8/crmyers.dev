@@ -14,12 +14,10 @@ export class ProfessionalPersonalPopupComponent implements OnInit {
   }
 
   selectPersonal() {
-      console.log('Selected personal');
       this.dialogRef.close('personal');
   }
 
   selectProfessional(): void {
-      console.log('Selected resume');
       this.dialogRef.close('professional');
   }
 }

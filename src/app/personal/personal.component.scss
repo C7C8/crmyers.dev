@@ -1,4 +1,6 @@
 mat-toolbar {
+    margin-bottom: 0.5em;
+
     .header-title {
         font-family: DotMatrix, sans-serif;
         font-weight: bold;
@@ -12,5 +14,8 @@ mat-toolbar {
         font-family: Lalezar, sans-serif;
         font-size: 1em;
     }
+}
 
+.content {
+    padding: 0 2%;
 }

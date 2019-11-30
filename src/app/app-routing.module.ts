@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PersonalHomeComponent } from './personal/personal-home.component';
-import { ProfessionalComponent } from './professional/professional.component';
 import { LoaderComponent } from './loader.component';
 
 
 const routes: Routes = [
-    { path: 'personal', component: PersonalHomeComponent },
-    { path: 'professional', component: ProfessionalComponent },
-    { path: '**', component: LoaderComponent}
+    { path: 'personal', loadChildren: () => import('./personal/personal.module').then(m => m.PersonalModule)},
+    { path: 'professional', loadChildren: () => import('./professional/professional.module').then(m => m.ProfessionalModule)},
+    { path: '**', component: LoaderComponent},
 ];
 
 @NgModule({
