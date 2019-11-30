@@ -14,6 +14,7 @@ import {
 import { ProfessionalPersonalPopupComponent } from './professional-personal-popup/professional-personal-popup.component';
 import { LoaderComponent } from './loader.component';
 import { RootComponent } from './root.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
     declarations: [
@@ -34,7 +35,7 @@ import { RootComponent } from './root.component';
         MatCardModule
     ],
     entryComponents: [ ProfessionalPersonalPopupComponent ],
-    providers: [],
+    providers: [ CookieService ],
     bootstrap: [ RootComponent ]
 })
 export class AppModule { }
