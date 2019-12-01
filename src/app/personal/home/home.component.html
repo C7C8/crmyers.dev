@@ -1,1 +1,44 @@
-<p>home works!</p>
+
+<div class="content-container">
+    <div class="intro">
+        <h1>Home</h1>
+        <p>Hi! I'm <span matTooltip="At least, I think">Chris Myers</span>, and I guess this is my
+        homepage! It's filled with stuff I've done, things I've worked on, and other miscellaneous
+        things I enjoy, so take a look around!</p>
+
+        I have a liking for programming, games, and 3D (CG) art &mdash; really, anything that involves
+        computers &mdash; not to mention data <em>stuff</em>, and less frequently <span matTooltip="Especially of cats">
+        photography</span>, writing,  and the occasional hike or long walk. Music is in there
+        somewhere... but I'm a little odd in that area, so let's not go there.
+    </div>
+
+    <div class="photo">
+    <mat-card>
+        <img src="/assets/personal/img/me.jpg" alt="me">
+    </mat-card>
+    </div>
+
+    <div class="carousel">
+        <mat-card>
+            <mat-card-title><h2>Some things I've made</h2></mat-card-title>
+            <ngu-carousel #carousel [inputs]="carouselConfig" [dataSource]="images">
+                <ngu-item NguCarouselItem *nguCarouselDef="let item;">
+                    <img [src]="item.image" [alt]="item.alt"/>
+                    <div class="caption"><em>{{item.caption}}</em></div>
+                </ngu-item>
+
+                <button NguCarouselPrev hidden #prev></button>
+                <button NguCarouselNext hidden #next></button>
+
+
+            </ngu-carousel>
+                     <ul class="carousel-point" NguCarouselPoint>
+                    <li *ngFor="let j of carousel.pointNumbers; let j = index" [class.active]="j==carousel.activePoint" (click)="carousel.moveTo(j)"></li>
+                </ul>
+            <div class="carousel-buttons">
+                <button mat-icon-button (click)="prev.click()"><mat-icon [inline]="true">keyboard_arrow_left</mat-icon></button>
+                <button mat-icon-button (click)="next.click()"><mat-icon [inline]="true">keyboard_arrow_right</mat-icon></button>
+            </div>
+        </mat-card>
+    </div>
+</div>

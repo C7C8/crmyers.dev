@@ -22,7 +22,7 @@ export class LoaderComponent implements AfterViewInit {
 
       const dialogRef = this.dialog.open(ProfessionalPersonalPopupComponent, {
           width: '66%',
-          height: '66%',
+          height: '80%',
           disableClose: true
       });
 

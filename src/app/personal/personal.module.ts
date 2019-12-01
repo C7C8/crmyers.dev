@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { PersonalRoutingModule } from './personal-routing.module';
 import { PersonalComponent } from './personal.component';
-import { MatButtonModule, MatMenuModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatIconModule, MatMenuModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
+import { NguCarouselModule } from '@ngu/carousel';
 
 
 @NgModule({
@@ -15,7 +16,10 @@ import { HomeComponent } from './home/home.component';
         MatMenuModule,
         MatButtonModule,
         MatTooltipModule,
-        MatToolbarModule
+        MatToolbarModule,
+        MatCardModule,
+        NguCarouselModule,
+        MatIconModule
     ]
 })
 export class PersonalModule { }

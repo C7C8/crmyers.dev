@@ -14,7 +14,7 @@
 @include font-face(Lalezar, "assets/fonts/Lalezar-Regular", bold, null, ttf);
 @include font-face(DotMatrix, "assets/fonts/DOTMATRI", null, null, ttf);
 @include font-face(DotMatrix, "assets/fonts/DOTMBold", bold, null, ttf);
-@include font-face(MaterialIcon, "assets/fonts/MaterialIcons-Regular", null, null, woff2);
+@include font-face("Material Icons", "assets/fonts/MaterialIcons-Regular", null, null, woff2);
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
