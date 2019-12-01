@@ -4,12 +4,10 @@
     grid-template-areas:
         "intro carousel carousel"
         "photo carousel carousel"
-        "photo history history"
-        "outro outro outro";
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+        "photo history history";
+    grid-template-rows: 18em 18em 24em;
     grid-template-columns: 1.5fr 1fr 1fr;
-    grid-row-gap: 1.5em;
-    grid-column-gap: 3em;
+    grid-gap: 1.5em;
 
     .caption {
         margin-top: 0.2em;
@@ -26,7 +24,7 @@
         min-height: 100%;
 
         mat-card {
-            height: 100%;
+            height: 95%;
             width: 100%;
 
             mat-card-title, h2 {
@@ -97,5 +95,9 @@
         img {
             max-width: 100%;
         }
+    }
+
+    .history {
+        grid-area: history;
     }
 }
