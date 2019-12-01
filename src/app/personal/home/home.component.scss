@@ -10,6 +10,12 @@
     grid-template-columns: 2fr 1fr 2fr;
     grid-gap: 1.5em;
 
+    .caption {
+        margin-top: 0.2em;
+        opacity: 0.3;
+        font-size: 0.7em;
+    }
+
     .intro {
         grid-area: intro;
     }
@@ -32,12 +38,6 @@
             img {
                 max-width: 100%;
                 min-height: 100%;
-            }
-
-            .caption {
-                margin-top: 0.2em;
-                opacity: 0.3;
-                font-size: 0.7em;
             }
         }
 
