@@ -22,7 +22,7 @@ export class HomeComponent implements AfterViewInit {
             visible: true
         },
         load: 2,
-        touch: true,
+        touch: false,
         easing: 'ease',
     };
 
