@@ -9,12 +9,13 @@ import {
     MatMenuModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatDialogModule, MatCardModule
+    MatDialogModule, MatCardModule, MatIconModule, MatDividerModule
 } from '@angular/material';
 import { ProfessionalPersonalPopupComponent } from './professional-personal-popup/professional-personal-popup.component';
 import { LoaderComponent } from './loader.component';
 import { RootComponent } from './root.component';
 import { CookieService } from 'ngx-cookie-service';
+import { NguCarouselModule } from '@ngu/carousel';
 
 @NgModule({
     declarations: [
@@ -32,7 +33,10 @@ import { CookieService } from 'ngx-cookie-service';
         MatButtonModule,
         MatProgressSpinnerModule,
         MatDialogModule,
-        MatCardModule
+        MatCardModule,
+        NguCarouselModule,
+        MatIconModule,
+        MatDividerModule
     ],
     entryComponents: [ ProfessionalPersonalPopupComponent ],
     providers: [ CookieService ],
