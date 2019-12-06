@@ -9,29 +9,29 @@
     <!-- Computer stuff menu -->
     <button mat-button [matMenuTriggerFor]="computerMenu">Computers &amp; Code</button>
     <mat-menu #computerMenu="matMenu">
-        <button mat-menu-item [matMenuTriggerFor]="computerProgramsMenu">Programs</button>
-        <button mat-menu-item [matMenuTriggerFor]="computerWebDevMenu">Web Development</button>
-        <button mat-menu-item>Data Viz</button>
-        <button mat-menu-item>*NIX Ricing</button>
+        <button mat-menu-item [matMenuTriggerFor]="computerProgramsMenu" [routerLink]="['/personal/programs']">Programs</button>
+        <button mat-menu-item [matMenuTriggerFor]="computerWebDevMenu" [routerLink]="['/personal/webdev']">Web Development</button>
+        <button mat-menu-item [routerLink]="['/personal/dataviz']">Data Viz</button>
+        <button mat-menu-item [routerLink]="['/personal/ricing']">*NIX Ricing</button>
     </mat-menu>
     <mat-menu #computerProgramsMenu="matMenu">
-        <button mat-menu-item>Works-in-Progress</button>
-        <button mat-menu-item>Rust-Brainfuck</button>
-        <button mat-menu-item>Hack for Venezuela Bulletin Board</button>
-        <button mat-menu-item>SoftEng API Update Checker</button>
-        <button mat-menu-item>SoftEng Hospital Navigator</button>
-        <button mat-menu-item>MSP430 Tetris</button>
+        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="wip">Works-in-Progress</button>
+        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="rustbf">Rust-Brainfuck</button>
+        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="bulletin">Hack for Venezuela Bulletin Board</button>
+        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="updatecheck">SoftEng API Update Checker</button>
+        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="navigator">SoftEng Hospital Navigator</button>
+        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="tetris">MSP430 Tetris</button>
         <mat-divider></mat-divider>
         <em mat-menu-item>Old high school stuff:</em>
-        <button mat-menu-item>Pathviz 2</button>
-        <button mat-menu-item>N-Ball Simulator</button>
-        <button mat-menu-item>JFrameList</button>
+        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="pathviz">Pathviz 2</button>
+        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="nball">N-Ball Simulator</button>
+        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="jframelist">JFrameList</button>
     </mat-menu>
     <mat-menu #computerWebDevMenu>
-        <button mat-menu-item>SoftEng API Repository</button>
-        <button mat-menu-item>Twitter Analyzer</button>
-        <button mat-menu-item>Secret 31</button>
-        <button mat-menu-item>Eilat Transportation Site</button>
+        <button mat-menu-item [routerLink]="['/personal/webdev']" fragment="api-repo">SoftEng API Repository</button>
+        <button mat-menu-item [routerLink]="['/personal/webdev']" fragment="twitter-analyzer">Twitter Analyzer</button>
+        <button mat-menu-item [routerLink]="['/personal/webdev']" fragment="secret31">Secret 31</button>
+        <button mat-menu-item [routerLink]="['/personal/webdev']" fragment="eilat-transport">Eilat Transportation Site</button>
         <a [href]="window.location.origin"
            matTooltip="To understand recursion, you must first understand recursion..."
            matTooltipShowDelay="500"
@@ -41,26 +41,26 @@
     </mat-menu>
 
     <!--Art stuff menu -->
-    <button mat-button [matMenuTriggerFor]="artMenu">Art 'n' Stuff</button>
+    <button mat-button [matMenuTriggerFor]="artMenu">Arts, Crafts, 'n' Stuff</button>
     <mat-menu #artMenu>
-        <button mat-menu-item>LaTeX Stuff</button>
-        <button mat-menu-item>Blender Renders</button>
-        <button mat-menu-item>Cooking &amp; Baking</button>
+        <button mat-menu-item [routerLink]="['/personal/crafts/latex']">LaTeX Stuff</button>
+        <button mat-menu-item [routerLink]="['/personal/crafts/blender']">Blender Renders</button>
+        <button mat-menu-item [routerLink]="['/personal/crafts/cooking']">Cooking &amp; Baking</button>
     </mat-menu>
 
     <!-- Game stuff menu -->
     <button mat-button [matMenuTriggerFor]="gamesMenu">Random Game Things</button>
     <mat-menu #gamesMenu>
-        <button mat-menu-item>Minecraft</button>
-        <button mat-menu-item>Factorio</button>
-        <button mat-menu-item>Space Engineers</button>
-        <button mat-menu-item>Kerbal Space Program</button>
-        <button mat-menu-item>Terraria</button>
-        <button mat-menu-item>Other things</button>
+        <button mat-menu-item [routerLink]="['/personal/games/minecraft']">Minecraft</button>
+        <button mat-menu-item [routerLink]="['/personal/games/factorio']">Factorio</button>
+        <button mat-menu-item [routerLink]="['/personal/games/space-engineers']">Space Engineers</button>
+        <button mat-menu-item [routerLink]="['/personal/games/ksp']">Kerbal Space Program</button>
+        <button mat-menu-item [routerLink]="['/personal/games/terraria']">Terraria</button>
+        <button mat-menu-item [routerLink]="['/personal/games/other']">Other things</button>
     </mat-menu>
 
-    <button mat-button>Travel photos</button>
-    <button mat-button>Interesting Links &amp; Stuff I Like</button>
+    <button mat-button [routerLink]="['/personal/travel']">Travel photos</button>
+    <button mat-button [routerLink]="['/personal/interesting-stuff']">Interesting Links &amp; Stuff I Like</button>
     <button mat-button [routerLink]="['/personal/contact']">Contact</button>
 </mat-toolbar>
 

@@ -15,10 +15,44 @@ import {
 import { HomeComponent } from './home/home.component';
 import { NguCarouselModule } from '@ngu/carousel';
 import { ContactComponent } from './contact/contact.component';
+import { DataVizComponent } from './computers/data-viz/data-viz.component';
+import { RicingComponent } from './computers/ricing/ricing.component';
+import { ProgramsComponent } from './computers/programs/programs.component';
+import { WebdevComponent } from './computers/webdev/webdev.component';
+import { LatexComponent } from './crafts/latex/latex.component';
+import { BlenderComponent } from './crafts/blender/blender.component';
+import { CookingComponent } from './crafts/cooking/cooking.component';
+import { MinecraftComponent } from './games/minecraft/minecraft.component';
+import { FactorioComponent } from './games/factorio/factorio.component';
+import { SpaceEngineersComponent } from './games/space-engineers/space-engineers.component';
+import { KspComponent } from './games/ksp/ksp.component';
+import { TerrariaComponent } from './games/terraria/terraria.component';
+import { GamesOtherComponent } from './games/games-other/games-other.component';
+import { TravelComponent } from './travel/travel.component';
+import { InterestingStuffComponent } from './interesting-stuff/interesting-stuff.component';
 
 
 @NgModule({
-  declarations: [PersonalComponent, HomeComponent, ContactComponent],
+    declarations: [
+        PersonalComponent,
+        HomeComponent,
+        ContactComponent,
+        DataVizComponent,
+        RicingComponent,
+        ProgramsComponent,
+        WebdevComponent,
+        LatexComponent,
+        BlenderComponent,
+        CookingComponent,
+        MinecraftComponent,
+        FactorioComponent,
+        SpaceEngineersComponent,
+        KspComponent,
+        TerrariaComponent,
+        GamesOtherComponent,
+        TravelComponent,
+        InterestingStuffComponent
+    ],
     imports: [
         CommonModule,
         PersonalRoutingModule,
@@ -32,4 +66,5 @@ import { ContactComponent } from './contact/contact.component';
         MatDividerModule
     ]
 })
-export class PersonalModule { }
+export class PersonalModule {
+}
