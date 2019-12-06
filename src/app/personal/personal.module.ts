@@ -14,10 +14,11 @@ import {
 } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { NguCarouselModule } from '@ngu/carousel';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
-  declarations: [PersonalComponent, HomeComponent],
+  declarations: [PersonalComponent, HomeComponent, ContactComponent],
     imports: [
         CommonModule,
         PersonalRoutingModule,

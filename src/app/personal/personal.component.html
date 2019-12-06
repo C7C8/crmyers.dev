@@ -1,5 +1,5 @@
 <mat-toolbar>
-    <a [href]="window.location.origin"
+    <a [routerLink]="['/personal']"
        class="header-title"
        matTooltip="Is it clich&eacute;d? Yes. Does it look cool? Yeah!"
        matTooltipShowDelay="1500">
@@ -61,7 +61,7 @@
 
     <button mat-button>Travel photos</button>
     <button mat-button>Interesting Links &amp; Stuff I Like</button>
-    <button mat-button>Contact</button>
+    <button mat-button [routerLink]="['/personal/contact']">Contact</button>
 </mat-toolbar>
 
 <div class="content-container">
@@ -72,7 +72,7 @@
     <footer>
         <a [href]="window.location.origin"><img src="/assets/img/gtva.png" alt="logo thingy"/></a>
         <a href="https://github.com/c7c8/crmyers.dev"><img src="/assets/img/gh-logo.png" alt="github logo"/></a>
-        <p><em>Copyright &copy; 2019- Christopher Myers. Code available under the GNU Affero General Public License, individual works may differ.
+        <p><em>Copyright &copy; 2019- Christopher Myers. Site code available under the GNU Affero General Public License, individual works may differ.
             <b><a href="https://github.com/c7c8/crmyers.dev/issues/new">Report a bug</a></b></em>
         </p>
     </footer>
