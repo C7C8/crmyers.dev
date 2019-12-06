@@ -9,11 +9,11 @@ mat-toolbar {
         color: #00b300;
         padding-right: 1em;
     }
+}
 
-    button {
-        font-family: Lalezar, sans-serif;
-        font-size: 1em;
-    }
+button, a {
+    font-family: Lalezar, sans-serif;
+    font-size: 1em;
 }
 
 .content-container {
