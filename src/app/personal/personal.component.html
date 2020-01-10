@@ -1,7 +1,7 @@
 <mat-toolbar>
     <a [routerLink]="['/personal']"
        class="header-title"
-       matTooltip="Is it clich&eacute;d? Yes. Does it look cool? Yeah!"
+       matTooltip="Is it clich&eacute;d? Yup. Does it look cool? Yup."
        matTooltipShowDelay="1500">
         || CRMYERS.DEV ||
     </a>
@@ -9,23 +9,10 @@
     <!-- Computer stuff menu -->
     <button mat-button [matMenuTriggerFor]="computerMenu">Computers &amp; Code</button>
     <mat-menu #computerMenu="matMenu">
-        <button mat-menu-item [matMenuTriggerFor]="computerProgramsMenu" [routerLink]="['/personal/programs']">Programs</button>
-        <button mat-menu-item [matMenuTriggerFor]="computerWebDevMenu" [routerLink]="['/personal/webdev']">Web Development</button>
+        <button mat-menu-item [routerLink]="['/personal/programs']">Programs</button>
+        <button mat-menu-item [routerLink]="['/personal/webdev']">Web Development</button>
         <button mat-menu-item [routerLink]="['/personal/dataviz']">Data Viz</button>
         <button mat-menu-item [routerLink]="['/personal/ricing']">*NIX Ricing</button>
-    </mat-menu>
-    <mat-menu #computerProgramsMenu="matMenu">
-        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="wip">Works-in-Progress</button>
-        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="rustbf">Rust-Brainfuck</button>
-        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="bulletin">Hack for Venezuela Bulletin Board</button>
-        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="updatecheck">SoftEng API Update Checker</button>
-        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="navigator">SoftEng Hospital Navigator</button>
-        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="tetris">MSP430 Tetris</button>
-        <mat-divider></mat-divider>
-        <em mat-menu-item>Old high school stuff:</em>
-        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="pathviz">Pathviz 2</button>
-        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="nball">N-Ball Simulator</button>
-        <button mat-menu-item [routerLink]="['/personal/programs']" fragment="jframelist">JFrameList</button>
     </mat-menu>
     <mat-menu #computerWebDevMenu>
         <button mat-menu-item [routerLink]="['/personal/webdev']" fragment="api-repo">SoftEng API Repository</button>

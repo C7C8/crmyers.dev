@@ -1,1 +1,47 @@
-<p>programs works!</p>
+<h1>Programs</h1>
+
+<p>I've worked on a lot of different projects over the past ~5 years or so, most of which were made in the course of
+    self-education or a simple desire to mess around a bit. Most everything can be found on my GitHub profile at
+<a href="https://github.com/c7c8">github.com/C7C8</a>, and all have free software licenses (typically GPLv3, or MIT in
+a few cases). That means that you're more than welcome to use my code for anything you like &mdash; in fact I encourage
+it!</p>
+
+<p>In the case of the GPL'd code I do ask that you share modifications or code you make using my code in the same way,
+under the same license (it's part of the GPL). This may seem strict, but in my view I wouldn't be where I am today
+without plenty of open source projects to guide me along, so I prefer to give back and make sure that indirect products
+of my work are similarly open to learn from.</p>
+
+<div class="accordion-wrapper">
+    <mat-accordion [multi]="true">
+        <app-program name="Rust-Brainfuck"
+                     [tags]="['Rust']"
+                     year="2019"
+                     github="c7c8/rust-brainfuck">
+            <p><b>Rust Brainfuck</b> is a simple, 88-line Brainfuck interpreter written in Rust as a get-to-know-the-language
+            exercise. I've made it available because it is, after all, a working interpreter. I haven't gotten <em>too</em>
+            far with Rust just yet, but one day I hope to!</p>
+
+            <p>If you aren't familiar with it, <a href="https://en.wikipedia.org/wiki/Brainfuck">Brainfuck</a> is something
+            of a joke language with only 8 commands and a data pointer. You can move the data pointer, increment/decrement
+            the data at the pointer, print the data, overwrite it with user input, execute simple conditionals, and... that's
+            about it! Due to the simplicity of the language it fits well into a stack model, so every brainfuck interpreter
+            ever is extraordinarily simple. This one has a little bit of extra error handling and work done to allow integer
+            wraparound (which if I recall correctly would otherwise be a problem), but otherwise it falls in line with all
+            other interpreters.</p>
+        </app-program>
+
+        <app-program name="WIP: Deuterium Knowledge Engine"
+                     [tags]="['WIP', 'Java', 'GUI']"
+                     year="2019"
+                     github="c7c8/deuterium">
+        </app-program>
+        <app-program name="Hack for Venezuela Bulletin Board" [tags]="['Android', 'Cloud', 'GUI']" year="2018"></app-program>
+        <app-program name="CS 3733 API Update Checker" [tags]="['Java', 'Network', 'College']" year="2018"></app-program>
+        <app-program name="WIP: PDP-1186" [tags]="['C++', 'WIP']" year="2018"></app-program>
+        <app-program name="MSP430 Tetris" [tags]="['C']" year="2018"></app-program>
+        <app-program name="CS 3733 Hospital Navigator" [tags]="['Java', 'GUI', 'College']" year="2017"></app-program>
+        <app-program name="Pathviz 2" [tags]="['C++', 'GUI', 'High School']" year="2016"></app-program>
+        <app-program name="JFrameList" [tags]="['Java', 'GUI', 'High School']" year="2015"></app-program>
+        <app-program name="N-Ball Simulator" [tags]="['C++', 'GUI', 'High School']" year="2015" ></app-program>
+    </mat-accordion>
+</div>

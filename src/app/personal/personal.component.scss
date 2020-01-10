@@ -1,5 +1,5 @@
 mat-toolbar {
-    margin-bottom: 0.5em;
+    margin-bottom: 1.5em;
 
     .header-title {
         font-family: DotMatrix, sans-serif;
@@ -39,6 +39,7 @@ button, a {
         }
 
         img {
+            filter: invert(100%);
             max-width: 4em;
             margin: auto 1em;
             opacity: 0.4;

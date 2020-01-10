@@ -1,0 +1,30 @@
+<mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            {{name}}
+        </mat-panel-title>
+        <mat-panel-description *ngIf="tags">
+            <mat-chip-list>
+                <mat-chip *ngFor="let tag of tags">{{tag}}</mat-chip>
+            </mat-chip-list>
+            <span *ngIf="year" class="year">{{year}}</span>
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <!-- Image preview, but with lazy loading so we don't overwhelm the user with high-res image loading. Not that it
+    really matters anyways though, since the panel is expanded by default-->
+    <ng-template matExpansionPanelContent>
+        <img *ngIf="image" [src]="image" [alt]="name +'image preview'"/>
+    </ng-template>
+
+    <ng-content></ng-content>
+
+    <mat-action-row *ngIf="github || link">
+        <a mat-icon-button *ngIf="link" [matTooltip]="'View online at ' + link" [href]="link">
+            <mat-icon [inline]="true">link</mat-icon>
+        </a>
+        <a mat-icon-button *ngIf="github" [matTooltip]="'View on GitHub at ' + github" [href]="'https://github.com/' + github">
+            <img src="/assets/img/gh-logo.png" alt="GH logo">
+        </a>
+    </mat-action-row>
+</mat-expansion-panel>

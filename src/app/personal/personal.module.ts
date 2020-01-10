@@ -5,8 +5,8 @@ import { PersonalRoutingModule } from './personal-routing.module';
 import { PersonalComponent } from './personal.component';
 import {
     MatButtonModule,
-    MatCardModule,
-    MatDividerModule,
+    MatCardModule, MatChipsModule,
+    MatDividerModule, MatExpansionModule,
     MatIconModule,
     MatMenuModule,
     MatToolbarModule,
@@ -30,6 +30,7 @@ import { TerrariaComponent } from './games/terraria/terraria.component';
 import { GamesOtherComponent } from './games/games-other/games-other.component';
 import { TravelComponent } from './travel/travel.component';
 import { InterestingStuffComponent } from './interesting-stuff/interesting-stuff.component';
+import { ProgramComponent } from './computers/programs/program/program.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { InterestingStuffComponent } from './interesting-stuff/interesting-stuff
         TerrariaComponent,
         GamesOtherComponent,
         TravelComponent,
-        InterestingStuffComponent
+        InterestingStuffComponent,
+        ProgramComponent
     ],
     imports: [
         CommonModule,
@@ -63,7 +65,9 @@ import { InterestingStuffComponent } from './interesting-stuff/interesting-stuff
         MatCardModule,
         NguCarouselModule,
         MatIconModule,
-        MatDividerModule
+        MatDividerModule,
+        MatExpansionModule,
+        MatChipsModule
     ]
 })
 export class PersonalModule {
