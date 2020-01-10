@@ -21,7 +21,7 @@ of my work are similarly open to learn from.</p>
             exercise. I've made it available because it is, after all, a working interpreter. I haven't gotten <em>too</em>
             far with Rust just yet, but one day I hope to!</p>
 
-            <p>If you aren't familiar with it, <a href="https://en.wikipedia.org/wiki/Brainfuck">Brainfuck</a> is something
+            <p>If you aren't familiar with it, <a href="en.wikipedia.org/wiki/Brainfuck">Brainfuck</a> is something
             of a joke language with only 8 commands and a data pointer. You can move the data pointer, increment/decrement
             the data at the pointer, print the data, overwrite it with user input, execute simple conditionals, and... that's
             about it! Due to the simplicity of the language it fits well into a stack model, so every brainfuck interpreter
@@ -34,9 +34,59 @@ of my work are similarly open to learn from.</p>
                      [tags]="['WIP', 'Java', 'GUI']"
                      year="2019"
                      github="c7c8/deuterium">
+            <p>
+                <b>Deuterium</b> is a project I started toying around with a long time ago but only started putting into real
+                code a few months ago. The idea is to create a knowledge management engine &mdash; something akin to a very
+                sophisticated mind map &amp; with elements of simple graph theory to allow organization of both what is
+                already known and what has not yet been learned. It's based on dependency graph model, wherein pieces of
+                knowledge have both dependencies and dependents, with those links forming edges of a directed graph. When
+                knowledge is modeled like this, it makes it easier to group information together or sort it using simple
+                algorithms or network analysis techniques. It also fits well into the model of a person researching
+                something who finds something else they want to check on later, or who realizes they need to learn
+                something else in order to understand their current goal.
+            </p>
+
+            <p>
+                For example, suppose you wanted to learn about atoms. To start you might want to understand what the
+                properties of mass are, so you note that you need to learn some classical physics. Then, you realize
+                that you should probably brush up on your calculus so you can do some of the more complex calculations.
+                After realizing you've found yourself in a physics rabbit hole, you return to atoms and note down that
+                you should read up on electrons, protons, and neutrons. In the process you happen across electrical charge,
+                so you note that down too. Electric fields can result in forces, you note, so that takes you back to
+                classical physics.
+            </p>
+
+            <p>
+                The problem you've encountered is that there are an incredible amount of things to learn but it might be
+                tough to know where to start, or what to read up on if you need a refresher on something. The program I'm
+                building, Deuterium, is designed to tackle that problem. Each of the subjects from above would get its
+                own vertex on the graph, and the relationships between them would be modeled as directed edges. Then if
+                you wanted to know what you should read up on (and in what order), you could select one vertex and perform
+                a simple topological sort. If, much later, you amassed a huge network of subjects and knowledge and attached
+                notes, you could even perform a network analysis to group pieces of information into logical subjects.
+            </p>
+
+            <p>
+                Deuterium isn't complete yet and it likely won't be for a while, but when it's finished it will ideally
+                have a full, intuitive and modern looking UI, plus numerous features to assist in the learning and
+                researching .
+            </p>
         </app-program>
-        <app-program name="Hack for Venezuela Bulletin Board" [tags]="['Android', 'Cloud', 'GUI']" year="2018"></app-program>
-        <app-program name="CS 3733 API Update Checker" [tags]="['Java', 'Network', 'College']" year="2018"></app-program>
+
+<!--        <app-program name="Hack for Venezuela Bulletin Board" [tags]="['Android', 'Cloud', 'GUI']" year="2018"></app-program>-->
+
+        <app-program name="CS 3733 API Update Checker"
+                     [tags]="['Java', 'Network']"
+                     year="2018"
+                     github="c7c8/SoftEng-API-UpdateChecker">
+            The <b>CS 3733 API Update Checker</b> is a simple Java library for teams of students taking Professor Wong's
+            Software Engineering class at Worcester Polytechnic Institute. As part of the class, teams create and share Java
+            libraries for other teams to integrate into their projects. I built a website that hosts a Maven repository
+            containing all of these APIs, which makes it easier for teams to share and update their libraries. This library
+            simply checks the server to see if an update for a given API is available, for instance to help a team prompt
+            the user into updating.
+        </app-program>
+
         <app-program name="WIP: PDP-1186" [tags]="['C++', 'WIP']" year="2018"></app-program>
         <app-program name="MSP430 Tetris" [tags]="['C']" year="2018"></app-program>
         <app-program name="CS 3733 Hospital Navigator" [tags]="['Java', 'GUI', 'College']" year="2017"></app-program>

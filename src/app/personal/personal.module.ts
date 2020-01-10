@@ -30,7 +30,7 @@ import { TerrariaComponent } from './games/terraria/terraria.component';
 import { GamesOtherComponent } from './games/games-other/games-other.component';
 import { TravelComponent } from './travel/travel.component';
 import { InterestingStuffComponent } from './interesting-stuff/interesting-stuff.component';
-import { ProgramComponent } from './computers/programs/program/program.component';
+import { ProgramComponent } from '../common/program/program.component';
 
 
 @NgModule({
