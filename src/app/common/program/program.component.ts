@@ -9,9 +9,10 @@ export class ProgramComponent implements OnInit {
     @Input() name: string;
     @Input() tags: Array<string>;
     @Input() year: number;
-    @Input() image: string;
     @Input() github: string;
     @Input() link: string;
+    @Input() video: string;
+    @Input() image: string;
 
     constructor() { }
 

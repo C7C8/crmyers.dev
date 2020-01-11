@@ -12,4 +12,8 @@ export class PersonalComponent implements OnInit {
 
     ngOnInit() {
     }
+
+    year(): number {
+        return (new Date()).getFullYear();
+    }
 }

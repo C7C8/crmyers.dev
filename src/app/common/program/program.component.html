@@ -11,11 +11,13 @@
         </mat-panel-description>
     </mat-expansion-panel-header>
 
-    <!-- Image preview, but with lazy loading so we don't overwhelm the user with high-res image loading. Not that it
-    really matters anyways though, since the panel is expanded by default-->
-    <ng-template matExpansionPanelContent>
+    <div class="media-container" *ngIf="video">
+        <video [src]="video" controls></video>
+    </div>
+
+    <div class="media-container">
         <img *ngIf="image" [src]="image" [alt]="name +'image preview'"/>
-    </ng-template>
+    </div>
 
     <ng-content></ng-content>
 

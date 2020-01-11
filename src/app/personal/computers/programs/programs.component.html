@@ -34,6 +34,8 @@ of my work are similarly open to learn from.</p>
                      [tags]="['WIP', 'Java', 'GUI']"
                      year="2019"
                      github="c7c8/deuterium">
+            <p><b><em>Warning!</em> Big text dump incoming!</b></p>
+
             <p>
                 <b>Deuterium</b> is a project I started toying around with a long time ago but only started putting into real
                 code a few months ago. The idea is to create a knowledge management engine &mdash; something akin to a very
@@ -87,11 +89,113 @@ of my work are similarly open to learn from.</p>
             the user into updating.
         </app-program>
 
-        <app-program name="WIP: PDP-1186" [tags]="['C++', 'WIP']" year="2018"></app-program>
-        <app-program name="MSP430 Tetris" [tags]="['C']" year="2018"></app-program>
-        <app-program name="CS 3733 Hospital Navigator" [tags]="['Java', 'GUI', 'College']" year="2017"></app-program>
-        <app-program name="Pathviz 2" [tags]="['C++', 'GUI', 'High School']" year="2016"></app-program>
-        <app-program name="JFrameList" [tags]="['Java', 'GUI', 'High School']" year="2015"></app-program>
-        <app-program name="N-Ball Simulator" [tags]="['C++', 'GUI', 'High School']" year="2015" ></app-program>
+        <app-program name="WIP: PDP-1186"
+                     [tags]="['C++', 'WIP']"
+                     year="2018"
+                     github="c7c8/pdp-1186">
+           <b>PDP-1186</b> is a long-since abandoned project to create an emulator for an old minicomputer called the
+            PDP-11. It was part self-education (I <em>really</em> like systems programming), part hack-a-day, part
+            old-computer enthusiasm &mdash; the PDP-11 helped inspire crucial elements of the x86 architecture, and was
+            the first to run UNIX v6.
+
+            I worked on the project during a hack-a-day hosted at my university and got some work done on it
+            shortly afterwards, but haven't picked it up since. I likely won't in the future considering that
+            <a href="www.de.ioccc.org/2018/mills/hint.html">in 2018 someone won the IOCCC Best in Show for
+            a very tiny PDP-7 emulator</a>.
+        </app-program>
+
+        <app-program name="MSP430 Tetris"
+                     [tags]="['C', 'Embedded']"
+                     year="2018"
+                     github="c7c8/msp430-tetris"
+                     video="/assets/personal/vid/msp430-tetris.m4v">
+            <p>
+                In 2018 I took a class on embedded computing, which was really just a class on learning about one
+                specific device instead of generals of embedded computing. Since it wasn't very interesting I ported
+                Tetris over to the class microprocessor in my free time!
+            </p>
+
+            <p>
+                It uses the LCD included with the course kit and a board we were provided with as a base (you can
+                see it underneath in the video, it has a buzzer and a keybad attached to it). The keypad keys
+                2, 4, 5, and 6 control rotation, left, down, and right, respectively, while the original Tetris
+                tune plays in the background (although at the time the video was taken, I hadn't fixed it properly
+                so the notes are more than a little distorted!).
+            </p>
+
+            <p>
+                Major credit to <a href="github.com/brenns10">Stephen Brennan</a> for his terminal
+                <a href="github.com/brenns10/tetris">Tetris implementation in C</a>; his work underpins the
+                port I made, and without it this project would not have gotten off the ground. Everything else
+                &mdash; the music, the keyboard controls, timing and interrupts, etc. &mdash; is mine. Unfortunately
+                I couldn't include the display or keypad driver code since they belong to Worcester Poyltechnic Institute.
+            </p>
+        </app-program>
+
+        <app-program name="CS 3733 Hospital Navigator"
+                     [tags]="['Java', 'GUI', 'College']"
+                     year="2017"
+                     github="c7c8/CS3733-HospitalProject"
+                     image="/assets/personal/img/hospital-navigator.png">
+            <p>
+                <b>The Hospital Navigator</b> project was constructed by a team of 9 students at Worcester Polytechnic
+                Institute, of which I had the position of lead developer. The application is designed to provide
+                visitors to Brigham and Women's Faulkner Hospital directions from set locations ("kiosks") to any
+                other location in the building. Users can search for doctors on the main menu, or they can simply
+                click on locations on the map view, and they'll be given visual and textual directions to get where
+                they want. Other features include a "fire exit" mode, which directs users to the nearest exit, a
+                map editor, multiple pathfinding modes, and the option to use only stairs or only elevators.
+            </p>
+        </app-program>
+
+        <app-program name="Pathviz 2"
+                     [tags]="['C++', 'GUI', 'High School']"
+                     year="2016"
+                     github="c7c8/Pathviz-2"
+                     image="/assets/personal/img/home-carousel/pathviz2.png">
+            <p>
+                <b>Pathviz 2</b> is the <span matTooltip="0-ordered!">third iteration</span> of a pathfinding
+                algorithm visualizer I built in my junior year of high school. It's designed to show how two common
+                pathfinding algorithms, A* and Dijkstra's, are able to efficiently find the shortest path to the goal.
+                The colorscheme (yes, I know it's insanely grating on the eyes) uses blue for empty space, red for
+                explored areas, green for areas on the open list, orange for barriers, and dark green for the found
+                path. You can choose between the two algorithms (plus three different heuristics for A*) and a simple
+                depth-first maze generator.
+            </p>
+
+            <p>
+                On the technical side, the program is written in C++ using SDL2 for graphics and input. The very
+                first version of the program &mdash; version 0 &mdash; was also written in C++, but used a homebrew
+                terminal graphics library that, while effective, didn't allow for mouse input. The second version
+                straight-up didn't work, so here we are on the third version, which is much more nicely architected
+                and easy to use.
+            </p>
+        </app-program>
+
+<!--        <app-program name="JFrameList" [tags]="['Java', 'GUI', 'High School']" year="2015"></app-program>-->
+        <app-program name="N-Ball Simulator"
+                     [tags]="['C++', 'GUI', 'High School']"
+                     year="2015"
+                     github="nball-sim"
+                     image="/assets/personal/img/home-carousel/nball-sim.png">
+            <p>
+                <b>N-Ball Simulator</b> is the second version of a Newtonian gravity simulator I built, at first for fun,
+                but then later adapted for my senior year physics project in high school. The simulator allows you to
+                launch balls in a 2D plane that have mass and velocity. Every object is attracted to every other object
+                according to Newton's law of universal gravitation. Objects leave trails behind them that correspond
+                to where they've been (longer means faster, too), and the simulation draws a red dot to show the barycenter,
+                or center of mass for all objects in the simulation. Under the hood it uses velocity Verlet integration,
+                which allows it to more or less conserve energy and stay accurate over time.
+            </p>
+            <p>
+                After initial development in 2015, I adapted it for use in a physics project centered on finding a
+                relationship between the number of objects, the total mass of the simulation, and the amount of time it
+                takes for all objects to coalesce into one &mdash; an attempt to model the formation of stars or planets.
+                I collected some 40,000 data points from the simulation and determined there was as the very least an
+                inverse-square relationship between mass (or as written in my report, number of objects in the simulation)
+                and coalescence time, and that if a simulation had too much kinetic energy and not enough mass it simply
+                wouldn't coalesce.
+            </p>
+        </app-program>
     </mat-accordion>
 </div>
