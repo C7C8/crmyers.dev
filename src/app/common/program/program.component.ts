@@ -14,13 +14,22 @@ export class ProgramComponent implements OnInit {
     @Input() video: string;
     @Input() image: string;
     @ViewChild('vid', {static: false}) vid;
+    private shown = true;
 
     constructor() { }
 
     ngOnInit() {
     }
 
-    pauseVideo(): void {
+    public hide(): void {
+        this.shown = false;
+    }
+
+    public show(): void {
+        this.shown = true;
+    }
+
+    private pauseVideo(): void {
         if (this.vid) {
             this.vid.nativeElement.pause();
         }

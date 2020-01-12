@@ -12,6 +12,31 @@ without plenty of open source projects to guide me along, so I prefer to give ba
 of my work are similarly open to learn from.</p>
 
 <div class="accordion-wrapper">
+    <!-- Search-by-tag -->
+    <mat-form-field>
+        <mat-chip-list #tagList>
+            <mat-chip *ngFor="let tag of activeTags" selectable removable (removed)="removeTag(tag)">
+                {{tag}} <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+        </mat-chip-list>
+        <input
+            placeholder="Search projects by tag"
+            #tagInput
+            [formControl]="tagControl"
+            [matAutocomplete]="autocomplete"
+            [matChipInputFor]="tagList"
+            [matChipInputSeparatorKeyCodes]="separators"
+            matChipInputAddOnBlur
+            (matChipInputTokenEnd)="addTag($event)">
+
+        <mat-autocomplete #autocomplete=matAutocomplete (optionSelected)="selectTag($event)">
+            <mat-option *ngFor="let tag of filteredTags | async" [value]="tag">
+                {{tag}}
+            </mat-option>
+        </mat-autocomplete>
+
+    </mat-form-field>
+
     <mat-accordion [multi]="true">
         <app-program name="Rust-Brainfuck"
                      [tags]="['Rust']"
@@ -152,7 +177,7 @@ of my work are similarly open to learn from.</p>
                      github="c7c8/Pathviz-2"
                      image="/assets/personal/img/home-carousel/pathviz2.png">
             <p>
-                <b>Pathviz 2</b> is the <span matTooltip="0-ordered!">third iteration</span> of a pathfinding
+                <b>Pathviz 2</b> is the third iteration of a pathfinding
                 algorithm visualizer I built in my junior year of high school. It's designed to show how two common
                 pathfinding algorithms, A* and Dijkstra's, are able to efficiently find the shortest path to the goal.
                 The colorscheme (yes, I know it's insanely grating on the eyes) uses blue for empty space, red for
