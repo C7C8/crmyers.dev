@@ -1,0 +1,29 @@
+<!-- Search-by-tag -->
+<mat-form-field>
+    <mat-chip-list #tagList>
+        <mat-chip *ngFor="let tag of activeTags"
+                  removable
+                  (removed)="removeTag(tag)">
+            {{tag}} <mat-icon matChipRemove>cancel</mat-icon>
+        </mat-chip>
+    </mat-chip-list>
+    <input
+        placeholder="Search projects by tag"
+		#tagInput
+        [formControl]="tagControl"
+        [matAutocomplete]="autocomplete"
+        [matChipInputFor]="tagList"
+        [matChipInputSeparatorKeyCodes]="separators"
+        matChipInputAddOnBlur
+        (matChipInputTokenEnd)="addTag($event)">
+
+    <mat-autocomplete #autocomplete=matAutocomplete (optionSelected)="selectTag($event)">
+        <mat-option *ngFor="let tag of filteredTags | async" [value]="tag">
+            {{tag}}
+        </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
+
+<mat-accordion [multi]="true">
+    <ng-content></ng-content>
+</mat-accordion>

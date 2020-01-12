@@ -11,33 +11,7 @@ under the same license (it's part of the GPL). This may seem strict, but in my v
 without plenty of open source projects to guide me along, so I prefer to give back and make sure that indirect products
 of my work are similarly open to learn from.</p>
 
-<div class="accordion-wrapper">
-    <!-- Search-by-tag -->
-    <mat-form-field>
-        <mat-chip-list #tagList>
-            <mat-chip *ngFor="let tag of activeTags" selectable removable (removed)="removeTag(tag)">
-                {{tag}} <mat-icon matChipRemove>cancel</mat-icon>
-            </mat-chip>
-        </mat-chip-list>
-        <input
-            placeholder="Search projects by tag"
-            #tagInput
-            [formControl]="tagControl"
-            [matAutocomplete]="autocomplete"
-            [matChipInputFor]="tagList"
-            [matChipInputSeparatorKeyCodes]="separators"
-            matChipInputAddOnBlur
-            (matChipInputTokenEnd)="addTag($event)">
-
-        <mat-autocomplete #autocomplete=matAutocomplete (optionSelected)="selectTag($event)">
-            <mat-option *ngFor="let tag of filteredTags | async" [value]="tag">
-                {{tag}}
-            </mat-option>
-        </mat-autocomplete>
-
-    </mat-form-field>
-
-    <mat-accordion [multi]="true">
+<app-programs-list-searchable>
         <app-program name="Rust-Brainfuck"
                      [tags]="['Rust']"
                      year="2019"
@@ -55,7 +29,7 @@ of my work are similarly open to learn from.</p>
             other interpreters.</p>
         </app-program>
 
-        <app-program name="WIP: Deuterium Knowledge Engine"
+        <app-program name="Deuterium Knowledge Engine"
                      [tags]="['WIP', 'Java', 'GUI']"
                      year="2019"
                      github="c7c8/deuterium">
@@ -219,5 +193,4 @@ of my work are similarly open to learn from.</p>
                 wouldn't coalesce.
             </p>
         </app-program>
-    </mat-accordion>
-</div>
+</app-programs-list-searchable>

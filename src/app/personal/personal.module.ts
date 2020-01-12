@@ -33,6 +33,7 @@ import { TravelComponent } from './travel/travel.component';
 import { InterestingStuffComponent } from './interesting-stuff/interesting-stuff.component';
 import { ProgramComponent } from '../common/program/program.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProgramsListSearchableComponent } from '../common/programs-list-searchable/programs-list-searchable.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         GamesOtherComponent,
         TravelComponent,
         InterestingStuffComponent,
-        ProgramComponent
+        ProgramComponent,
+        ProgramsListSearchableComponent,
     ],
     imports: [
         CommonModule,
