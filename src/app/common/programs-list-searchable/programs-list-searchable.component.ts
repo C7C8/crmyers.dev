@@ -39,7 +39,6 @@ export class ProgramsListSearchableComponent implements AfterContentInit {
             }
         }
         this.allTags.sort();
-        console.log('tags', this.allTags);
 
         this.filteredTags = this.tagControl.valueChanges.pipe(
             startWith(null),

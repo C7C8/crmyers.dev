@@ -6,4 +6,7 @@ import { Component} from '@angular/core';
     styleUrls: [ './programs.component.scss' ]
 })
 export class ProgramsComponent {
+    year(): number {
+        return (new Date()).getFullYear();
+    }
 }

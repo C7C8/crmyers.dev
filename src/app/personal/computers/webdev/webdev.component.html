@@ -1,1 +1,62 @@
-<p>webdev works!</p>
+<h1>Web Development</h1>
+
+<!-- year()-2018 as a years counter has got to be the most fantastically lazy way I've ever made for avoiding having to update a site. -->
+<p>
+    Web development is something I took up much later than the rest of my programming talents, about {{year() - 2018}}
+    years ago starting in spring 2018 with some basic Angular and Python Flask for an application I wanted to build.
+    I've been hacking away with it ever since, working on one project after another in slow succession. I've picked up on
+    some other technologies along the way, experimenting with Webpack and Vue and other libraries and frameworks,
+    but mostly I stick to basic Angular and my own SCSS. I like to keep a <em>small</em> <code> node_modules</code>,
+    thank you very much!
+</p>
+
+<p>
+    All of these applications can be found on my GitHub profile at <a href="github.com/c7c8">github.com/c7c8</a>,
+    all under the Affero GPLv3. That means you're more than welcome to use my code &mdash; in fact I encourage it!
+    I wouldn't be where I am today without a plethora of open-source code to learn from and use as examples, so it's
+    my pleasure to give back. I do request that if you distribute a modified version of my work or host a modified
+    version elsewhere that you distribute the source code under the same license (the license has more information on
+    that), in the spirit of similarly giving back to the programming community.
+</p>
+
+<p>
+    <em>Looking for <a [routerLink]="['/personal/programs']">programs</a> or
+        <a [routerLink]="['/personal/dataviz']"> data visualization</a> instead?</em>
+</p>
+
+<app-programs-list-searchable>
+    <app-program name="CRMyers.dev"
+                 github="c7c8/crmyers.dev"
+                 year="2019"
+                 link="https://crmyers.dev">
+
+    </app-program>
+
+    <app-program name="Eilat Transportation"
+                 github="c7c8/Eilat-Transport-Map-Site"
+                 year="2019"
+                 [tags]="['Data viz', 'MySQL', 'GCP', 'College']">
+
+    </app-program>
+
+    <app-program name="Twittalyzer"
+                 github="c7c8/Twitter-Analysis-Site"
+                 year="2018"
+                 [tags]="['Data viz', 'MySQL', 'College']">
+
+    </app-program>
+
+    <app-program name="Secret 31"
+                 github="c7c8/Secrets-Site"
+                 year="2018"
+                 [tags]="['Cryptography', 'MySQL', 'College']">
+
+    </app-program>
+
+    <app-program name="CS 3733 API Repository"
+                 github="c7c8/SoftEng-API-Site"
+                 year="2018"
+                 link="https://apisite.crmyers.dev"
+                 [tags]="['AWS', 'CRUD', 'Users']">
+    </app-program>
+</app-programs-list-searchable>

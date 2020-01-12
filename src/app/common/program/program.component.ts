@@ -7,7 +7,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 })
 export class ProgramComponent implements OnInit {
     @Input() name: string;
-    @Input() tags: Array<string>;
+    @Input() tags: string[] = [];
     @Input() year: number;
     @Input() github: string;
     @Input() link: string;
