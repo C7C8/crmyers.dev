@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'app-program',
@@ -13,9 +13,16 @@ export class ProgramComponent implements OnInit {
     @Input() link: string;
     @Input() video: string;
     @Input() image: string;
+    @ViewChild('vid', {static: false}) vid;
 
     constructor() { }
 
     ngOnInit() {
+    }
+
+    pauseVideo(): void {
+        if (this.vid) {
+            this.vid.nativeElement.pause();
+        }
     }
 }

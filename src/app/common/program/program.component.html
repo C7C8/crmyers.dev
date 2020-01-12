@@ -1,18 +1,18 @@
-<mat-expansion-panel [expanded]="true">
+<mat-expansion-panel [expanded]="false" (closed)="pauseVideo()">
     <mat-expansion-panel-header>
         <mat-panel-title>
             {{name}}
+            <span *ngIf="year" class="year">{{year}}</span>
         </mat-panel-title>
         <mat-panel-description *ngIf="tags">
             <mat-chip-list>
                 <mat-chip *ngFor="let tag of tags">{{tag}}</mat-chip>
             </mat-chip-list>
-            <span *ngIf="year" class="year">{{year}}</span>
         </mat-panel-description>
     </mat-expansion-panel-header>
 
     <div class="media-container" *ngIf="video">
-        <video [src]="video" controls></video>
+        <video #vid [src]="video" controls></video>
     </div>
 
     <div class="media-container">
