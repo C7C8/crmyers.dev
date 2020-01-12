@@ -16,7 +16,6 @@ import {
 import { HomeComponent } from './home/home.component';
 import { NguCarouselModule } from '@ngu/carousel';
 import { ContactComponent } from './contact/contact.component';
-import { DataVizComponent } from './computers/data-viz/data-viz.component';
 import { RicingComponent } from './computers/ricing/ricing.component';
 import { ProgramsComponent } from './computers/programs/programs.component';
 import { WebdevComponent } from './computers/webdev/webdev.component';
@@ -41,7 +40,6 @@ import { ProgramsListSearchableComponent } from '../common/programs-list-searcha
         PersonalComponent,
         HomeComponent,
         ContactComponent,
-        DataVizComponent,
         RicingComponent,
         ProgramsComponent,
         WebdevComponent,

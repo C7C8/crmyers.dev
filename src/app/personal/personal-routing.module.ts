@@ -5,7 +5,6 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProgramsComponent } from './computers/programs/programs.component';
 import { WebdevComponent } from './computers/webdev/webdev.component';
-import { DataVizComponent } from './computers/data-viz/data-viz.component';
 import { RicingComponent } from './computers/ricing/ricing.component';
 import { MinecraftComponent } from './games/minecraft/minecraft.component';
 import { FactorioComponent } from './games/factorio/factorio.component';
@@ -25,7 +24,6 @@ const routes: Routes = [
             { path: 'home', component: HomeComponent },
             { path: 'programs', component: ProgramsComponent },
             { path: 'webdev', component: WebdevComponent },
-            { path: 'dataviz', component: DataVizComponent },
             { path: 'ricing', component: RicingComponent },
             { path: 'contact', component: ContactComponent },
             {
