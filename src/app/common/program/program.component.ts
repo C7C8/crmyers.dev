@@ -14,7 +14,7 @@ export class ProgramComponent implements OnInit {
     @Input() video: string;
     @Input() image: string;
     @ViewChild('vid', {static: false}) vid;
-    private shown = true;
+    shown = true;
 
     constructor() { }
 
@@ -29,7 +29,7 @@ export class ProgramComponent implements OnInit {
         this.shown = true;
     }
 
-    private pauseVideo(): void {
+    public pauseVideo(): void {
         if (this.vid) {
             this.vid.nativeElement.pause();
         }
