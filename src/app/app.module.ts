@@ -3,14 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-    MatProgressSpinnerModule,
-    MatButtonModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatTooltipModule,
-    MatDialogModule, MatCardModule, MatIconModule, MatDividerModule
-} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { ProfessionalPersonalPopupComponent } from './professional-personal-popup/professional-personal-popup.component';
 import { LoaderComponent } from './loader.component';
 import { RootComponent } from './root.component';

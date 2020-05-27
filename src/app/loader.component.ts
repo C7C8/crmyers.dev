@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { ProfessionalPersonalPopupComponent } from './professional-personal-popup/professional-personal-popup.component';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';

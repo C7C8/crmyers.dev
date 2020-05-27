@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProfessionalPersonalPopupComponent } from './professional-personal-popup.component';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
-import { MatCardModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
 
 describe('ProfessionalPersonalPopupComponent', () => {
     let component: ProfessionalPersonalPopupComponent;

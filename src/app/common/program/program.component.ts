@@ -13,7 +13,7 @@ export class ProgramComponent implements OnInit {
     @Input() link: string;
     @Input() video: string;
     @Input() image: string;
-    @ViewChild('vid', {static: false}) vid;
+    @ViewChild('vid') vid;
     shown = true;
 
     constructor() { }

@@ -3,7 +3,8 @@ import { ProgramComponent } from '../program/program.component';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
-import { MatAutocomplete, MatAutocompleteSelectedEvent, MatChipInputEvent } from '@angular/material';
+import { MatAutocomplete, MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
+import { MatChipInputEvent } from '@angular/material/chips';
 import { map, startWith } from 'rxjs/operators';
 import * as _ from 'lodash';
 
@@ -20,8 +21,8 @@ export class ProgramsListSearchableComponent implements AfterContentInit {
     activeTags: string[] = [];
     filteredTags: Observable<string[]>;
     tagControl = new FormControl();
-    @ViewChild('tagInput', {static: false}) tagInput: ElementRef<HTMLInputElement>;
-    @ViewChild('autocomplete', {static: false}) autocomplete: MatAutocomplete;
+    @ViewChild('tagInput') tagInput: ElementRef<HTMLInputElement>;
+    @ViewChild('autocomplete') autocomplete: MatAutocomplete;
 
     constructor() {
     }

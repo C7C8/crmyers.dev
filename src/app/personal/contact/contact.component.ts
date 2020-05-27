@@ -6,7 +6,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-    @ViewChild('gpgKey', { static: false } ) gpgKey: ElementRef;
+    @ViewChild('gpgKey') gpgKey: ElementRef;
 
   constructor() { }
 

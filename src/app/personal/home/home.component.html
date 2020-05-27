@@ -35,7 +35,7 @@
                 <button NguCarouselNext hidden #next></button>
             </ngu-carousel>
             <ul class="carousel-point" NguCarouselPoint>
-                <li *ngFor="let j of carousel.pointNumbers; let j = index" [class.active]="j==carousel.activePoint" (click)="carousel.moveTo(j)"></li>
+                <li *ngFor="let j of carousel.pointNumbers" [class.active]="j==carousel.activePoint" (click)="carousel.moveTo(j)"></li>
             </ul>
             <div class="carousel-buttons">
                 <button mat-icon-button (click)="prev.click()"><mat-icon [inline]="true">keyboard_arrow_left</mat-icon></button>
