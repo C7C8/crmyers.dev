@@ -13,18 +13,6 @@
         <button mat-menu-item [routerLink]="['/personal/webdev']">Web Development</button>
         <button mat-menu-item [routerLink]="['/personal/ricing']">*NIX Ricing</button>
     </mat-menu>
-    <mat-menu #computerWebDevMenu>
-        <button mat-menu-item [routerLink]="['/personal/webdev']" fragment="api-repo">SoftEng API Repository</button>
-        <button mat-menu-item [routerLink]="['/personal/webdev']" fragment="twitter-analyzer">Twitter Analyzer</button>
-        <button mat-menu-item [routerLink]="['/personal/webdev']" fragment="secret31">Secret 31</button>
-        <button mat-menu-item [routerLink]="['/personal/webdev']" fragment="eilat-transport">Eilat Transportation Site</button>
-        <a [href]="window.location.origin"
-           matTooltip="To understand recursion, you must first understand recursion..."
-           matTooltipShowDelay="500"
-           mat-menu-item>
-            CRMyers.dev
-        </a>
-    </mat-menu>
 
     <!--Art stuff menu -->
     <button mat-button [matMenuTriggerFor]="artMenu">Arts, Crafts, 'n' Stuff</button>
@@ -32,6 +20,7 @@
         <button mat-menu-item [routerLink]="['/personal/crafts/latex']">LaTeX Stuff</button>
         <button mat-menu-item [routerLink]="['/personal/crafts/blender']">Blender Renders</button>
         <button mat-menu-item [routerLink]="['/personal/crafts/cooking']">Cooking &amp; Baking</button>
+        <button mat-menu-item [routerLink]="['/personal/crafts/gardening']">Gardening</button>
     </mat-menu>
 
     <!-- Game stuff menu -->
@@ -58,7 +47,7 @@
     <footer>
         <a [href]="window.location.origin"><img src="/assets/img/gtva.png" alt="logo thingy"/></a>
         <a href="https://github.com/c7c8/crmyers.dev"><img src="/assets/img/gh-logo.png" alt="github logo"/></a>
-        <p><em>Copyright &copy; 2019-{{year()}} Christopher Myers. Site code available under the GNU Affero General Public License, individual works may differ.
+        <p><em>Copyright &copy; 2019-{{year()}} Christopher Myers. Site code available under the GNU Affero General Public License, individual works on display may differ.
             <b><a href="https://github.com/c7c8/crmyers.dev/issues/new">Report a bug</a></b></em>
         </p>
     </footer>

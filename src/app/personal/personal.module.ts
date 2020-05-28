@@ -34,6 +34,7 @@ import { InterestingStuffComponent } from './interesting-stuff/interesting-stuff
 import { ProgramComponent } from '../common/program/program.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProgramsListSearchableComponent } from '../common/programs-list-searchable/programs-list-searchable.component';
+import { GardeningComponent } from './crafts/gardening/gardening.component';
 
 
 @NgModule({
@@ -57,6 +58,7 @@ import { ProgramsListSearchableComponent } from '../common/programs-list-searcha
         InterestingStuffComponent,
         ProgramComponent,
         ProgramsListSearchableComponent,
+        GardeningComponent,
     ],
     imports: [
         CommonModule,

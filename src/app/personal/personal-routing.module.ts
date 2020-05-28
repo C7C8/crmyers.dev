@@ -17,6 +17,7 @@ import { BlenderComponent } from './crafts/blender/blender.component';
 import { CookingComponent } from './crafts/cooking/cooking.component';
 import { TravelComponent } from './travel/travel.component';
 import { InterestingStuffComponent } from './interesting-stuff/interesting-stuff.component';
+import { GardeningComponent } from './crafts/gardening/gardening.component';
 
 const routes: Routes = [
     {
@@ -40,7 +41,8 @@ const routes: Routes = [
                 path: 'crafts', children: [
                     { path: 'latex', component: LatexComponent },
                     { path: 'blender', component: BlenderComponent },
-                    { path: 'cooking', component: CookingComponent }
+                    { path: 'cooking', component: CookingComponent },
+                    { path: 'gardening', component: GardeningComponent }
                 ]
             },
             { path: 'travel', component: TravelComponent },
