@@ -20,9 +20,9 @@ import { ContactComponent } from './contact/contact.component';
 import { RicingComponent } from './computers/ricing/ricing.component';
 import { ProgramsComponent } from './computers/programs/programs.component';
 import { WebdevComponent } from './computers/webdev/webdev.component';
-import { LatexComponent } from './crafts/latex/latex.component';
-import { BlenderComponent } from './crafts/blender/blender.component';
-import { CookingComponent } from './crafts/cooking/cooking.component';
+import { LatexComponent } from './hobbies/latex/latex.component';
+import { BlenderComponent } from './hobbies/blender/blender.component';
+import { CookingComponent } from './hobbies/cooking/cooking.component';
 import { MinecraftComponent } from './games/minecraft/minecraft.component';
 import { FactorioComponent } from './games/factorio/factorio.component';
 import { SpaceEngineersComponent } from './games/space-engineers/space-engineers.component';
@@ -34,7 +34,7 @@ import { InterestingStuffComponent } from './interesting-stuff/interesting-stuff
 import { ProgramComponent } from '../common/program/program.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProgramsListSearchableComponent } from '../common/programs-list-searchable/programs-list-searchable.component';
-import { GardeningComponent } from './crafts/gardening/gardening.component';
+import { GardeningComponent } from './hobbies/gardening/gardening.component';
 
 
 @NgModule({

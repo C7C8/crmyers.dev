@@ -12,12 +12,12 @@ import { KspComponent } from './games/ksp/ksp.component';
 import { SpaceEngineersComponent } from './games/space-engineers/space-engineers.component';
 import { TerrariaComponent } from './games/terraria/terraria.component';
 import { GamesOtherComponent } from './games/games-other/games-other.component';
-import { LatexComponent } from './crafts/latex/latex.component';
-import { BlenderComponent } from './crafts/blender/blender.component';
-import { CookingComponent } from './crafts/cooking/cooking.component';
+import { LatexComponent } from './hobbies/latex/latex.component';
+import { BlenderComponent } from './hobbies/blender/blender.component';
+import { CookingComponent } from './hobbies/cooking/cooking.component';
 import { TravelComponent } from './travel/travel.component';
 import { InterestingStuffComponent } from './interesting-stuff/interesting-stuff.component';
-import { GardeningComponent } from './crafts/gardening/gardening.component';
+import { GardeningComponent } from './hobbies/gardening/gardening.component';
 
 const routes: Routes = [
     {
@@ -38,7 +38,7 @@ const routes: Routes = [
                 ]
             },
             {
-                path: 'crafts', children: [
+                path: 'hobbies', children: [
                     { path: 'latex', component: LatexComponent },
                     { path: 'blender', component: BlenderComponent },
                     { path: 'cooking', component: CookingComponent },
