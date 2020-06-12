@@ -35,6 +35,7 @@ import { ProgramComponent } from '../common/program/program.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProgramsListSearchableComponent } from '../common/programs-list-searchable/programs-list-searchable.component';
 import { GardeningComponent } from './hobbies/gardening/gardening.component';
+import { CarouselComponent } from '../common/carousel/carousel.component';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { GardeningComponent } from './hobbies/gardening/gardening.component';
         InterestingStuffComponent,
         ProgramComponent,
         ProgramsListSearchableComponent,
+        CarouselComponent,
         GardeningComponent,
     ],
     imports: [

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LatexCarouselImages } from './LatexCarouselImages';
 
 @Component({
   selector: 'app-latex',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./latex.component.scss']
 })
 export class LatexComponent implements OnInit {
+    images = LatexCarouselImages;
+    constructor() {
+    }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+    ngOnInit(): void {
+    }
 }

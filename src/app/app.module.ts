@@ -17,6 +17,7 @@ import { LoaderComponent } from './loader.component';
 import { RootComponent } from './root.component';
 import { CookieService } from 'ngx-cookie-service';
 import { NguCarouselModule } from '@ngu/carousel';
+import { CarouselComponent } from './common/carousel/carousel.component';
 
 @NgModule({
     declarations: [
