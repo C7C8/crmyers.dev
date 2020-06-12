@@ -19,8 +19,8 @@ export class ImageCardComponent implements OnInit {
 
     showDetails(): void {
         this.dialog.open(this.imageDetailDialog, {
-            height: `${window.innerHeight * 0.8}px`,
-            width: `${window.innerWidth * 0.8}px`
+            height: `${window.innerHeight * 0.85}px`,
+            width: `${window.innerWidth * 0.85}px`
         });
     }
 }
