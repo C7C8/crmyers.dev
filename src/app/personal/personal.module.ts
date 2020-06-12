@@ -39,6 +39,7 @@ import { CarouselComponent } from '../common/carousel/carousel.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ImageCardComponent } from '../common/image-card/image-card.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FlexLayoutModule, FlexModule, GridModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -64,7 +65,7 @@ import { MatDialogModule } from '@angular/material/dialog';
         ProgramsListSearchableComponent,
         CarouselComponent,
         GardeningComponent,
-        ImageCardComponent
+        ImageCardComponent,
     ],
     imports: [
         CommonModule,
@@ -84,6 +85,8 @@ import { MatDialogModule } from '@angular/material/dialog';
         ReactiveFormsModule,
         MatGridListModule,
         MatDialogModule,
+        FlexModule,
+        GridModule
     ],
     schemas: [ NO_ERRORS_SCHEMA ]
 })

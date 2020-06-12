@@ -2,145 +2,159 @@
     <h1>Blender Renders</h1>
 
     <p><a href="https://www.blender.org/">Blender</a> is a sophisticated 3D modeling and rendering program that can easily
-    compete with proprietary solutions like Maya. I got into 3D modeling around summer 2017 at first as a passing interest, but later
-    with much more seriousness as I tried to find a way to express creativity beyond just code. I can't draw at all thanks
-    to a fun neurological/muscle problem, so 3D modelling is the next best thing! Blender is my tool of choice because
-    not only is it ridiculously high quality, but it's entirely free-as-in-freedom and open-source!</p>
+        compete with proprietary solutions like Maya. I got into 3D modeling around summer 2017 at first as a passing interest, but later
+        with much more seriousness as I tried to find a way to express creativity beyond just code. I can't draw at all thanks
+        to a fun neurological/muscle problem, so 3D modelling is the next best thing! Blender is my tool of choice because
+        not only is it ridiculously high quality, but it's entirely free-as-in-freedom and open-source!</p>
 
     <p>Below is a gallery of most of my work, loosely in order of my favorites. Clicking on one of the tiles will
-    reveal more details on the work, such as the inspiration and process behind it. Both high-quality finished works and
-    early drafts or learner's works are shown here, so you can picture my progress over time.</p>
+        reveal more details on the work, such as the inspiration and process behind it. Both high-quality finished works and
+        early drafts or learner's works are shown here, so you can picture my progress over time.</p>
 
-    <mat-grid-list [cols]="3" rowHeight="fit" gutterSize="0.5em">
-        <mat-grid-tile>
-            <app-image-card img="/assets/personal/img/blender/enterprise-ad-notexture.jpg"
-                            date="September 2017"
-                            title="Enterprise AD">
-                <art-caption>Untextured model of the Enterprise (1701-A) with lights themed after the Enterprise D.</art-caption>
-                <art-description>
-                    <p>
-                        Something I always wanted to see was the old-style <em>Enterprise</em>, from <em>Star Trek: The Original Series,</em>
-                        lit and textured as if it was from the era of <em>Star Trek: The Next Generation.</em> I started modelling
-                        using the plethora of orthographic images of the <em>Enterprise</em> available on the internet and made
-                        a simple lighting prototype to test out the model, and it looked great!
-                    </p>
-                    <p>
-                        After that life caught up with me, so I stopped working on it, but I was satisfied anyways. These days you can
-                        see a modern-looking, fully CGI <em>Enterprise</em> briefly featured in <em>Star Trek: Discovery.</em>
-                    </p>
-                </art-description>
-            </app-image-card>
-        </mat-grid-tile>
+    <div gdColumns="1fr 1fr 1fr" gdRows="1fr!" gdGap="0.5em">
+        <app-image-card
+                        img="/assets/personal/img/blender/enterprise-ad-notexture.jpg"
+                        date="September 2017"
+                        title="Enterprise AD">
+            <art-caption>Untextured model of the Enterprise (1701-A) with lights themed after the Enterprise D.</art-caption>
+            <art-description>
+                <p>
+                    Something I always wanted to see was the old-style <em>Enterprise</em>, from <em>Star Trek: The Original Series,</em>
+                    lit and textured as if it was from the era of <em>Star Trek: The Next Generation.</em> I started modelling
+                    using the plethora of orthographic images of the <em>Enterprise</em> available on the internet and made
+                    a simple lighting prototype to test out the model, and it looked great!
+                </p>
+                <p>
+                    After that life caught up with me, so I stopped working on it, but I was satisfied anyways. These days you can
+                    see a modern-looking, fully CGI <em>Enterprise</em> briefly featured in <em>Star Trek: Discovery.</em>
+                </p>
+            </art-description>
+        </app-image-card>
 
-        <mat-grid-tile>
-            <app-image-card img="/assets/personal/img/blender/magnet-toy.jpg"
-                            date="January 2019"
-                            title="Desk Magnet Toy">
-                <art-caption>A model of a magnet fidget toy that I keep on my desk.</art-caption>
-                <art-description>
-                    <p>
-                        I was bored before heading off to my project-abroad quarter of my junior year and I felt like
-                        making a render of something. I looked around my desk and realized that the little slow-fall
-                        magnet slider toy I have would be perfect for an animation! I wanted to make it photorealistic,
-                        with the camera and lights tracking the toy as it moved up, rotated around once (so the slider would smoothly
-                        fall), and went back into its base.
-                    </p>
+        <app-image-card
+                        img="/assets/personal/img/blender/magnet-toy.jpg"
+                        date="January 2019"
+                        title="Desk Magnet Toy">
+            <art-caption>A model of a magnet fidget toy that I keep on my desk.</art-caption>
+            <art-description>
+                <p>
+                    I was bored before heading off to my project-abroad quarter of my junior year and I felt like
+                    making a render of something. I looked around my desk and realized that the little slow-fall
+                    magnet slider toy I have would be perfect for an animation! I wanted to make it photorealistic,
+                    with the camera and lights tracking the toy as it moved up, rotated around once (so the slider would smoothly
+                    fall), and went back into its base.
+                </p>
 
-                    <p>
-                        I got all the modelling and texturing done &mdash; and it looks pretty good if I do say so myself!
-                        &mdash; so I set on the animations next. Unfortunately that wasn't nearly as easy as I hoped.
-                        The motion I wanted involved physics with constraints -- I wanted the slider to collide with either
-                        end of the toy while under the influence of gravity, <em>and</em> stay locked on the axis of the
-                        toy's shaft. I could get one or two working at the same time, but all three proved impossible.
-                        Either there would be weird collision errors with the end caps, or the slider wouldn't stay locked
-                        on the axis, or some other arcane issue would pop up.
-                    </p>
+                <p>
+                    I got all the modelling and texturing done &mdash; and it looks pretty good if I do say so myself!
+                    &mdash; so I set on the animations next. Unfortunately that wasn't nearly as easy as I hoped.
+                    The motion I wanted involved physics with constraints -- I wanted the slider to collide with either
+                    end of the toy while under the influence of gravity, <em>and</em> stay locked on the axis of the
+                    toy's shaft. I could get one or two working at the same time, but all three proved impossible.
+                    Either there would be weird collision errors with the end caps, or the slider wouldn't stay locked
+                    on the axis, or some other arcane issue would pop up.
+                </p>
 
-                    <p>
-                        Frustrated and out of time, I gave up and just rendered a still image of it. I'm proud of that, at least.
-                    </p>
-                </art-description>
-            </app-image-card>
-        </mat-grid-tile>
+                <p>
+                    Frustrated and out of time, I gave up and just rendered a still image of it. I'm proud of that, at least.
+                </p>
+            </art-description>
+        </app-image-card>
 
-        <mat-grid-tile>
-            <app-image-card img="/assets/personal/img/blender/dreadbot-gears.jpg"
-                            date="August 2017"
-                            title="'Dreadbots' Gears">
-                <art-caption>'Dreadbots' gear lapel pins.</art-caption>
-                <art-description>
-                    <p>
-                        In high school, my FIRST Robotics Competition (FRC) team was Team 3656, the "Dreadbots". I wanted
-                        to test out photorealism (especially with anisotropy, which I hadn't tried before) so I gave these
-                        gears &mdash; modeled after the team's real-life wooden laser-cut-out lapel pins &mdash; a try.
-                        This was my first piece to pass the ultimate photorealism test, fooling people into believing
-                        they were real!
-                    </p>
-                </art-description>
-            </app-image-card>
-        </mat-grid-tile>
+        <app-image-card
+                        img="/assets/personal/img/blender/dreadbot-gears.jpg"
+                        date="August 2017"
+                        title="'Dreadbots' Gears">
+            <art-caption>'Dreadbots' gear lapel pins.</art-caption>
+            <art-description>
+                <p>
+                    In high school, my FIRST Robotics Competition (FRC) team was Team 3656, the "Dreadbots". I wanted
+                    to test out photorealism (especially with anisotropy, which I hadn't tried before) so I gave these
+                    gears &mdash; modeled after the team's real-life wooden laser-cut-out lapel pins &mdash; a try.
+                    This was my first piece to pass the ultimate photorealism test, fooling people into believing
+                    they were real!
+                </p>
+            </art-description>
+        </app-image-card>
 
-        <mat-grid-tile rowspan="2">
-            <app-image-card img="/assets/personal/img/blender/lilles-vengeance.jpg"
-                            date="November 2019"
-                            title="Lille's Vengeance">
-                <art-caption>A corvette on a lake, designed for the cover of a book my dad wrote.</art-caption>
-                <art-description>
-                    <p>This was a relatively simple render that I designed for the cover of my dad's book,
-                        <a href="https://www.amazon.com/DARK-STAR-PARIS-KNIGHT-ebook/dp/B0825BQSXZ"><em>The Dark
-                            Star of Paris Knight</em></a>. The boat and water were actually incredibly easy to make
-                        (Blender has a nice water simulation that I leveraged, and boats are easy to model), it was the
-                        aurora that took the most effort! Auroras are tricky to get right because they have emissivity
-                        from a volume, <em>and</em> it has to fade with height and vary in color &amp; intensity. To
-                        add an extra artsy feel to the whole image, I did some postprocessing with GIMP to add an oil
-                        painting effect.
-                    </p>
-                </art-description>
-            </app-image-card>
-        </mat-grid-tile>
+        <app-image-card gdRow="span 2"
+                        img="/assets/personal/img/blender/lilles-vengeance.jpg"
+                        date="November 2019"
+                        title="Lille's Vengeance">
+            <art-caption>A corvette on a lake, designed for the cover of a book my dad wrote.</art-caption>
+            <art-description>
+                <p>This was a relatively simple render that I designed for the cover of my dad's book,
+                    <a href="https://www.amazon.com/DARK-STAR-PARIS-KNIGHT-ebook/dp/B0825BQSXZ"><em>The Dark
+                        Star of Paris Knight</em></a>. The boat and water were actually incredibly easy to make
+                    (Blender has a nice water simulation that I leveraged, and boats are easy to model), it was the
+                    aurora that took the most effort! Auroras are tricky to get right because they have emissivity
+                    from a volume, <em>and</em> it has to fade with height and vary in color &amp; intensity. To
+                    add an extra artsy feel to the whole image, I did some postprocessing with GIMP to add an oil
+                    painting effect.
+                </p>
+            </art-description>
+        </app-image-card>
 
-        <mat-grid-tile>
-            <app-image-card img="/assets/personal/img/blender/anvil-pen.jpg"
-                            date="December 2017"
-                            title="Anvil & Pen">
-                <art-caption>A giant pen next to an anvil. Or a small anvil next to a pen. You decide.</art-caption>
-                <art-description>
-                    <p>
-                        I was bored one day after the semester ended. I had a pen that I modeled out, and I had an
-                        anvil that I had modeled out. Why not both at the same time? And so the anvil+pen is born.
-                    </p>
-                </art-description>
-            </app-image-card>
-        </mat-grid-tile>
+        <app-image-card
+                        img="/assets/personal/img/blender/anvil-pen.jpg"
+                        date="December 2017"
+                        title="Anvil & Pen">
+            <art-caption>A giant pen next to an anvil. Or a small anvil next to a pen. You decide.</art-caption>
+            <art-description>
+                <p>
+                    I was bored one day after the semester ended. I had a pen that I modeled out, and I had an
+                    anvil that I had modeled out. Why not both at the same time? And so the anvil+pen is born.
+                </p>
+            </art-description>
+        </app-image-card>
 
-        <mat-grid-tile>
-            <app-image-card img="/assets/personal/img/blender/combadge-2.jpg"
-                            date="September 2017"
-                            title="Combadge">
-                <art-caption>A poorly-textured "combadge" from Star Trek.</art-caption>
-                <art-description>
-                    <p>Continuing with the theme of my <em>Star Trek</em> obsession, this is communications badge
-                        ("combadge") with <em>very</em> poorly-made materials. I didn't work on this project too long,
-                        needless to say.
-                    </p>
-                </art-description>
-            </app-image-card>
-        </mat-grid-tile>
+        <app-image-card
+                        img="/assets/personal/img/blender/combadge-2.jpg"
+                        date="September 2017"
+                        title="Combadge">
+            <art-caption>A poorly-textured "combadge" from Star Trek.</art-caption>
+            <art-description>
+                <p>Continuing with the theme of my <em>Star Trek</em> obsession, this is communications badge
+                    ("combadge") with <em>very</em> poorly-made materials. I didn't work on this project too long,
+                    needless to say.
+                </p>
+            </art-description>
+        </app-image-card>
 
-        <mat-grid-tile>
-            <app-image-card img="/assets/personal/img/blender/donut-final.jpg"
-                            date="August 2017"
-                            title="Obligatory Donut">
-                <art-caption>The original. The first render that practically every Blender artist makes.</art-caption>
-                <art-description>
-                    <p>
-                        Yup, I have one of these too. This was the first 3D render I ever made, following the excellent
-                        tutorials from <a href="https://www.blenderguru.com/">Blender Guru</a>. These days the original
-                        "donut" series has been taken down and replaced with an updated and greatly expanded series, which
-                        you can find <a href="https://www.youtube.com/playlist?list=PLjEaoINr3zgEq0u2MzVgAaHEBt--xLB6U">here.</a>
-                    </p>
-                </art-description>
-            </app-image-card>
-        </mat-grid-tile>
-    </mat-grid-list>
+        <app-image-card
+                        img="/assets/personal/img/blender/donut-final.jpg"
+                        date="August 2017"
+                        title="Obligatory Donut">
+            <art-caption>The original. The first render that practically every Blender artist makes.</art-caption>
+            <art-description>
+                <p>
+                    Yup, I have one of these too. This was the first 3D render I ever made, following the excellent
+                    tutorials from <a href="https://www.blenderguru.com/">Blender Guru</a>. These days the original
+                    "donut" series has been taken down and replaced with an updated and greatly expanded series, which
+                    you can find <a href="https://www.youtube.com/playlist?list=PLjEaoINr3zgEq0u2MzVgAaHEBt--xLB6U">here.</a>
+                </p>
+            </art-description>
+        </app-image-card>
+
+        <app-image-card
+                        img="/assets/personal/img/blender/cant-outrun-bots.jpg"
+                        date="July 2019"
+                        title="Can't Outrun the Bots">
+            <art-caption>A group of giant Amazon warehouse robots knocking down an Outrun-themed city.</art-caption>
+            <art-description>
+                <p>
+                    At the end of my internship with Amazon Robotics (AR) I had to give a project presentation in front of a
+                    bunch of AR leadership so they could evaluate my work and (later) decide to hire me on. This was one
+                    of two AR-themed renders I made that summer as a sort of humorous shock factor at the end of the presentation.
+                    The idea was to put a large view of it at the end of the slideshow on the "Questions?" slide, so the
+                    audience would have full view of it and have a <em>number</em> of questions.
+                </p>
+                <p>
+                    To my delight it worked perfectly and I got a reasonable number of gasps and laughter, which is exactly
+                    what I wanted. It's not <em>really</em> a successful internship if you don't make your employer
+                    question your sanity, is it?
+                </p>
+            </art-description>
+        </app-image-card>
+    </div>
 </div>
