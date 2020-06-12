@@ -1,1 +1,31 @@
-<p>blender works!</p>
+<div class="normal-content">
+    <h1>Blender Renders</h1>
+
+    <p><a href="https://www.blender.org/">Blender</a> is a sophisticated 3D modeling and rendering program that can easily
+    compete with proprietary solutions like Maya. I got into 3D modeling around 2017 at first as a passing interest, but later
+    with much more seriousness as I tried to find a way to express creativity beyond just code. I can't draw at all thanks
+    to a fun neurological/muscle problem, so 3D modelling is the next best thing! Blender is my tool of choice because
+    not only is it ridiculously high quality, but it's entirely free-as-in-freedom and open-source!</p>
+
+    <p>Below is a gallery of some of my work, loosely in order from best to worst. Clicking on one of the tiles will
+    reveal more details on the work, such as the inspiration and process behind it.</p>
+
+    <mat-grid-list [cols]="3" rowHeight="fit" gutterSize="0.5em">
+        <mat-grid-tile>
+            <app-image-card date="June 2020" img="/assets/personal/img/home-carousel/apisite.png">
+                <art-title>API Site</art-title>
+                <art-caption>API Site caption</art-caption>
+                <art-description>
+                    <p>Put some demo text here plz</p>
+                </art-description>
+            </app-image-card>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <app-image-card date="June 2020" img="/assets/personal/img/home-carousel/apisite.png">
+                <art-title>API Site</art-title>
+                <art-caption>API Site caption</art-caption>
+                <art-description>Put some demo text here plz</art-description>
+            </app-image-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

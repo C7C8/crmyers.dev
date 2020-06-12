@@ -1,6 +1,6 @@
-import { CarouselImage } from '../../common/defs';
+import { Image } from '../../common/defs';
 
-export const HomeCarouselImages: CarouselImage[] = [
+export const HomeCarouselImages: Image[] = [
     {
         image: '/assets/personal/img/home-carousel/apisite.png',
         alt: 'API hosting site',

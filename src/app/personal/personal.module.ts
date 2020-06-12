@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PersonalRoutingModule } from './personal-routing.module';
@@ -36,6 +36,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProgramsListSearchableComponent } from '../common/programs-list-searchable/programs-list-searchable.component';
 import { GardeningComponent } from './hobbies/gardening/gardening.component';
 import { CarouselComponent } from '../common/carousel/carousel.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { ImageCardComponent } from '../common/image-card/image-card.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -61,6 +64,7 @@ import { CarouselComponent } from '../common/carousel/carousel.component';
         ProgramsListSearchableComponent,
         CarouselComponent,
         GardeningComponent,
+        ImageCardComponent
     ],
     imports: [
         CommonModule,
@@ -77,8 +81,11 @@ import { CarouselComponent } from '../common/carousel/carousel.component';
         MatChipsModule,
         MatFormFieldModule,
         MatAutocompleteModule,
-        ReactiveFormsModule
-    ]
+        ReactiveFormsModule,
+        MatGridListModule,
+        MatDialogModule,
+    ],
+    schemas: [ NO_ERRORS_SCHEMA ]
 })
 export class PersonalModule {
 }

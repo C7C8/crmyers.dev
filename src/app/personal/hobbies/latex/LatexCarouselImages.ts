@@ -1,6 +1,6 @@
-import { CarouselImage } from '../../../common/defs';
+import { Image } from '../../../common/defs';
 
-export const LatexCarouselImages: CarouselImage[] = [
+export const LatexCarouselImages: Image[] = [
     {
         image: '/assets/personal/img/latex/resume.png',
         alt: 'Personal resume',
