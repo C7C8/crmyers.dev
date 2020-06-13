@@ -41,6 +41,7 @@ import { ImageCardComponent } from '../common/image-card/image-card.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FlexLayoutModule, FlexModule, GridModule } from '@angular/flex-layout';
 import { SchoolNotesComponent } from './computers/school-notes/school-notes.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 
 @NgModule({
@@ -88,7 +89,8 @@ import { SchoolNotesComponent } from './computers/school-notes/school-notes.comp
         MatGridListModule,
         MatDialogModule,
         FlexModule,
-        GridModule
+        GridModule,
+        PdfViewerModule
     ],
     schemas: [ NO_ERRORS_SCHEMA ]
 })

@@ -1,3 +1,49 @@
 <div class="normal-content">
     <h1>University Notes</h1>
+
+    <p>
+        I have a <span matTooltip="Spatial dysgraphia and developmental coordination disorder" matTooltipShowDelay="1500" matTooltipPosition="before">pair of conditions</span>
+        that affect my handwriting; for me, writing a sentence is like doing 5 finger lifts of a heavy textbook, and
+        my writing is always sloppy &amp; cramped. While this definitely nudged me in the direction of computers, it made
+        taking notes &mdash; especially math &mdash; extremely difficult and painful. With handwriting I can't keep up
+        with professors and the pain is a serious distraction. During the first few weeks of my first term of university,
+        I got C's and D's on all my Calculus III quizzes because I couldn't learn effectively.
+    </p>
+    <p>
+        Fortunately, I was able to figure out a way around it! I learned <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>
+        specifically so I could take math notes, and augmented Vim with various plugins for autocomplete, templating,
+        and live previews of the code I was writing. Since my typing ability is unaffected (and I'm a fast typist)
+        I started live-TeX-ing my notes out in class and was able to keep up. My grades rose, my pain went away, and
+        now I have a library of notes to share.
+    </p>
+
+    <mat-divider></mat-divider>
+
+    <p>
+        The below does not represent all the courses that I took at WPI, for some <span matTooltip="Don't judge me, ok? Some classes were easier than others!">
+        I never took notes for</span>, while for others the notes aren't in good enough quality to share. You can browse
+        through them all by subject here with a PDF preview in-browser; a download button is below if you want an offline
+        copy of the document.
+    </p>
+
+    <div class="document-viewer">
+        <mat-card class="viewer">
+            <mat-card-header>
+                <mat-card-title>{{currentDocument.number}}: {{currentDocument.title}}</mat-card-title>
+                <mat-card-subtitle>Browse PDF</mat-card-subtitle>
+            </mat-card-header>
+            <pdf-viewer [src]="basePath + currentDocument.path"
+                        [render-text]="true"
+                        [show-all]="false"
+                        [zoom]="0.7"
+                        [autoresize]="true"
+                        page="3">
+            </pdf-viewer>
+        </mat-card>
+        <mat-card class="tree">
+            <mat-card-header>
+                <mat-card-title>Select Subject</mat-card-title>
+            </mat-card-header>
+        </mat-card>
+    </div>
 </div>
