@@ -9,9 +9,10 @@
     <!-- Computer stuff menu -->
     <button mat-button [matMenuTriggerFor]="computerMenu">Computers &amp; Code</button>
     <mat-menu #computerMenu="matMenu">
-        <button mat-menu-item [routerLink]="['/personal/programs']">Programs</button>
-        <button mat-menu-item [routerLink]="['/personal/webdev']">Web Development</button>
-        <button mat-menu-item [routerLink]="['/personal/ricing']">*NIX Ricing</button>
+        <button mat-menu-item [routerLink]="['/personal/computers/programs']">Programs</button>
+        <button mat-menu-item [routerLink]="['/personal/computers/webdev']">Web Development</button>
+        <button mat-menu-item [routerLink]="['/personal/computers/ricing']">*NIX Ricing</button>
+        <button mat-menu-item [routerLink]="['/personal/computers/university-notes']">University Notes</button>
     </mat-menu>
 
     <!--Art stuff menu -->

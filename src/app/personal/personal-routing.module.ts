@@ -18,15 +18,20 @@ import { CookingComponent } from './hobbies/cooking/cooking.component';
 import { TravelComponent } from './travel/travel.component';
 import { InterestingStuffComponent } from './interesting-stuff/interesting-stuff.component';
 import { GardeningComponent } from './hobbies/gardening/gardening.component';
+import { SchoolNotesComponent } from './computers/school-notes/school-notes.component';
 
 const routes: Routes = [
     {
         path: '', component: PersonalComponent, children: [
             { path: 'home', component: HomeComponent },
-            { path: 'programs', component: ProgramsComponent },
-            { path: 'webdev', component: WebdevComponent },
-            { path: 'ricing', component: RicingComponent },
-            { path: 'contact', component: ContactComponent },
+            {
+                path: 'computers', children: [
+                    { path: 'programs', component: ProgramsComponent },
+                    { path: 'webdev', component: WebdevComponent },
+                    { path: 'ricing', component: RicingComponent },
+                    { path: 'university-notes', component: SchoolNotesComponent },
+                ]
+            },
             {
                 path: 'games', children: [
                     { path: 'minecraft', component: MinecraftComponent },
@@ -47,6 +52,7 @@ const routes: Routes = [
             },
             { path: 'travel', component: TravelComponent },
             { path: 'interesting-stuff', component: InterestingStuffComponent },
+            { path: 'contact', component: ContactComponent },
             { path: '', redirectTo: 'home' }
         ]
     },

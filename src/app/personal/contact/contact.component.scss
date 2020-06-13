@@ -1,23 +1,10 @@
-.content-container {
-    max-width: 40%;
-    display: inline-block;
-}
-
 aside {
     font-size: 0.7em;
 }
 
 .gpg {
     float: right;
-    max-height: 33%;
-    min-width: 30%;
-
-    mat-card {
-    max-height: 250px;
-    }
-    mat-card-content {
-        height: 800px;
-    }
+    min-width: 30em;
 
     pre {
         height: auto;

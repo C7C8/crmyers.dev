@@ -40,6 +40,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { ImageCardComponent } from '../common/image-card/image-card.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FlexLayoutModule, FlexModule, GridModule } from '@angular/flex-layout';
+import { SchoolNotesComponent } from './computers/school-notes/school-notes.component';
 
 
 @NgModule({
@@ -66,6 +67,7 @@ import { FlexLayoutModule, FlexModule, GridModule } from '@angular/flex-layout';
         CarouselComponent,
         GardeningComponent,
         ImageCardComponent,
+        SchoolNotesComponent,
     ],
     imports: [
         CommonModule,
