@@ -10,18 +10,6 @@
 
     .viewer {
         grid-area: viewer;
-        min-width: 0;
-
-        mat-card-content {
-            margin-bottom: 0;
-        }
-
-        mat-card-actions {
-            text-align: center;
-            button {
-                margin: 0.5em 0.5em 0;
-            }
-        }
     }
 
     .tree {

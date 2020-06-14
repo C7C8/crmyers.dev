@@ -16,7 +16,6 @@ export class SchoolNotesComponent implements OnInit {
     // Data on the currently selected document, plus relevant controls
     basePath = basePath;
     currentDocument = SchoolNotesList[0].documents[0];
-    page = 1;
 
     constructor() {
         this.dataSource.data = SchoolNotesList;
@@ -31,16 +30,5 @@ export class SchoolNotesComponent implements OnInit {
 
     switchDocument(newDocument: PdfNotesNode): void {
         this.currentDocument = newDocument;
-        this.page = 1;
-    }
-
-    nextPage(): void {
-        this.page++;
-    }
-
-    prevPage(): void {
-        if (this.page > 1) {
-            this.page--;
-        }
     }
 }

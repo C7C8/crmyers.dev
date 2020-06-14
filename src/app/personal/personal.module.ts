@@ -39,10 +39,10 @@ import { CarouselComponent } from '../common/carousel/carousel.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ImageCardComponent } from '../common/image-card/image-card.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { FlexLayoutModule, FlexModule, GridModule } from '@angular/flex-layout';
+import { FlexModule, GridModule } from '@angular/flex-layout';
 import { SchoolNotesComponent } from './computers/school-notes/school-notes.component';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { MatTreeModule } from '@angular/material/tree';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 
 @NgModule({
@@ -91,8 +91,8 @@ import { MatTreeModule } from '@angular/material/tree';
         MatDialogModule,
         FlexModule,
         GridModule,
-        PdfViewerModule,
-        MatTreeModule
+        MatTreeModule,
+        NgxExtendedPdfViewerModule
     ],
     schemas: [ NO_ERRORS_SCHEMA ]
 })

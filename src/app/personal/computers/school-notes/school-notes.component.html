@@ -35,23 +35,11 @@
                 <mat-card-subtitle>Browse PDF</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>
-                <pdf-viewer [src]="basePath + currentDocument.path"
-                            [render-text]="true"
-                            [show-all]="false"
-                            [zoom]="0.7"
-                            [autoresize]="true"
-                            [page]="page">
-                </pdf-viewer>
-                <mat-divider></mat-divider>
+                <ngx-extended-pdf-viewer [src]="basePath + currentDocument.path"
+                                         useBrowserLocale="true"
+                                         height="100vh">
+                </ngx-extended-pdf-viewer>
             </mat-card-content>
-            <mat-card-actions>
-                <button mat-mini-fab color="primary" matTooltip="Previous page" (click)="prevPage()">
-                    <mat-icon>chevron_left</mat-icon>
-                </button>
-                <button mat-mini-fab color="primary" matTooltip="Next page" (click)="nextPage()">
-                    <mat-icon>chevron_right</mat-icon>
-                </button>
-            </mat-card-actions>
         </mat-card>
 
         <!-- File tree navigator -->
