@@ -15,7 +15,7 @@ export class SchoolNotesComponent implements OnInit {
 
     // Data on the currently selected document, plus relevant controls
     basePath = basePath;
-    currentDocument = SchoolNotesList[0].documents[0];
+    currentDocument = SchoolNotesList[0].documents[3];
 
     constructor() {
         this.dataSource.data = SchoolNotesList;

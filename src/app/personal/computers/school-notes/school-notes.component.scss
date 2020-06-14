@@ -10,6 +10,29 @@
 
     .viewer {
         grid-area: viewer;
+
+        ::ng-deep .mat-card-header-text {
+            width: 100%;
+        }
+
+        .mat-card-title {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .filler {
+                flex-grow: 1;
+            }
+        }
+
+        .mat-card-subtitle {
+            color: red;
+        }
+
+        mat-card-actions {
+            text-align: right;
+        }
     }
 
     .tree {

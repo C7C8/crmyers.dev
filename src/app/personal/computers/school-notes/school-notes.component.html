@@ -1,5 +1,5 @@
 <div class="normal-content">
-    <h1>University Notes</h1>
+    <h1>University Notes &amp; Major Projects</h1>
 
     <p>
         I have a <span matTooltip="Spatial dysgraphia and developmental coordination disorder" matTooltipShowDelay="1500" matTooltipPosition="before">pair of conditions</span>
@@ -31,8 +31,15 @@
         <!-- PDF viewer and controls -->
         <mat-card class="viewer">
             <mat-card-header>
-                <mat-card-title>{{currentDocument.number}} <em>{{currentDocument.title}}</em></mat-card-title>
-                <mat-card-subtitle>Browse PDF</mat-card-subtitle>
+                <mat-card-title>
+                        <span>{{currentDocument.number}} &mdash; <em>{{currentDocument.title}}</em></span>
+                        <span class="filler"></span>
+                        <a download [href]="basePath + currentDocument.path" mat-raised-button color="primary">Download</a>
+                </mat-card-title>
+                <mat-card-subtitle *ngIf="currentDocument.cGrade">
+                    <span>Warning: When taking this class, I earned a C. These notes should still be of okay quality, but
+                    don't rely on them completely.</span>
+                </mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>
                 <ngx-extended-pdf-viewer [src]="basePath + currentDocument.path"
@@ -40,6 +47,7 @@
                                          height="100vh">
                 </ngx-extended-pdf-viewer>
             </mat-card-content>
+
         </mat-card>
 
         <!-- File tree navigator -->
