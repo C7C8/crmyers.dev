@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { basePath, SchoolNotesList } from './DocumentList';
+import { basePath, SchoolNotesList, PdfNotesNode } from './DocumentList';
+import { NestedTreeControl } from '@angular/cdk/tree';
+import { MatTreeNestedDataSource } from '@angular/material/tree';
 
 @Component({
     selector: 'app-school-notes',
@@ -7,12 +9,38 @@ import { basePath, SchoolNotesList } from './DocumentList';
     styleUrls: ['./school-notes.component.scss']
 })
 export class SchoolNotesComponent implements OnInit {
+    // Document tree data & controls
+    treeControl = new NestedTreeControl<PdfNotesNode>(node => node.documents);
+    dataSource = new MatTreeNestedDataSource<PdfNotesNode>();
+
+    // Data on the currently selected document, plus relevant controls
     basePath = basePath;
     currentDocument = SchoolNotesList[0].documents[0];
+    page = 1;
 
-    constructor() { }
+    constructor() {
+        this.dataSource.data = SchoolNotesList;
+    }
 
     ngOnInit(): void {
     }
 
+    hasChild(_: number, node: PdfNotesNode): boolean {
+        return !!node.documents && node.documents.length > 0;
+    }
+
+    switchDocument(newDocument: PdfNotesNode): void {
+        this.currentDocument = newDocument;
+        this.page = 1;
+    }
+
+    nextPage(): void {
+        this.page++;
+    }
+
+    prevPage(): void {
+        if (this.page > 1) {
+            this.page--;
+        }
+    }
 }

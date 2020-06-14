@@ -42,6 +42,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { FlexLayoutModule, FlexModule, GridModule } from '@angular/flex-layout';
 import { SchoolNotesComponent } from './computers/school-notes/school-notes.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { MatTreeModule } from '@angular/material/tree';
 
 
 @NgModule({
@@ -90,7 +91,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
         MatDialogModule,
         FlexModule,
         GridModule,
-        PdfViewerModule
+        PdfViewerModule,
+        MatTreeModule
     ],
     schemas: [ NO_ERRORS_SCHEMA ]
 })
