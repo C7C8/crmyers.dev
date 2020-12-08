@@ -32,7 +32,7 @@ import { GamesOtherComponent } from './games/games-other/games-other.component';
 import { TravelComponent } from './travel/travel.component';
 import { InterestingStuffComponent } from './interesting-stuff/interesting-stuff.component';
 import { ProgramComponent } from '../common/program/program.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProgramsListSearchableComponent } from '../common/programs-list-searchable/programs-list-searchable.component';
 import { GardeningComponent } from './hobbies/gardening/gardening.component';
 import { CarouselComponent } from '../common/carousel/carousel.component';
@@ -43,6 +43,12 @@ import { FlexModule, GridModule } from '@angular/flex-layout';
 import { SchoolNotesComponent } from './computers/school-notes/school-notes.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { MatTabsModule } from '@angular/material/tabs';
+import { DoughCalculatorComponent } from './hobbies/cooking/dough-calculator/dough-calculator.component';
+import { MassVolumeConverterComponent } from './hobbies/cooking/mass-volume-converter/mass-volume-converter.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -70,30 +76,37 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
         GardeningComponent,
         ImageCardComponent,
         SchoolNotesComponent,
+        DoughCalculatorComponent,
+        MassVolumeConverterComponent,
     ],
-    imports: [
-        CommonModule,
-        PersonalRoutingModule,
-        MatMenuModule,
-        MatButtonModule,
-        MatTooltipModule,
-        MatToolbarModule,
-        MatCardModule,
-        NguCarouselModule,
-        MatIconModule,
-        MatDividerModule,
-        MatExpansionModule,
-        MatChipsModule,
-        MatFormFieldModule,
-        MatAutocompleteModule,
-        ReactiveFormsModule,
-        MatGridListModule,
-        MatDialogModule,
-        FlexModule,
-        GridModule,
-        MatTreeModule,
-        NgxExtendedPdfViewerModule
-    ],
+	imports: [
+		CommonModule,
+		PersonalRoutingModule,
+		MatMenuModule,
+		MatButtonModule,
+		MatTooltipModule,
+		MatToolbarModule,
+		MatCardModule,
+		NguCarouselModule,
+		MatIconModule,
+		MatDividerModule,
+		MatExpansionModule,
+		MatChipsModule,
+		MatFormFieldModule,
+		MatAutocompleteModule,
+		ReactiveFormsModule,
+		MatGridListModule,
+		MatDialogModule,
+		FlexModule,
+		GridModule,
+		MatTreeModule,
+		NgxExtendedPdfViewerModule,
+		MatTabsModule,
+		MatInputModule,
+		FormsModule,
+		MatTableModule,
+		MatSelectModule
+	],
     schemas: [ NO_ERRORS_SCHEMA ]
 })
 export class PersonalModule {

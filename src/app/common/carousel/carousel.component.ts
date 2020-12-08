@@ -10,6 +10,7 @@ import * as _ from 'lodash';
 })
 export class CarouselComponent implements AfterViewInit {
     @Input() images: Image[];
+    @Input() shuffle = true;
     @Input() carouselConfig: NguCarouselConfig = {
         grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
         slide: 2,
@@ -26,7 +27,9 @@ export class CarouselComponent implements AfterViewInit {
     };
 
     constructor(private cdr: ChangeDetectorRef) {
-        this.images = _.shuffle(this.images);
+        if (this.shuffle) {
+            this.images = _.shuffle(this.images);
+        }
     }
 
     ngAfterViewInit(): void {

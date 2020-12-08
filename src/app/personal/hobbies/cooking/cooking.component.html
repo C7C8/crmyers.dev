@@ -1,3 +1,108 @@
 <div class="normal-content">
     <h1>Cooking &amp; Baking</h1>
+    <p>
+        A particular hobby of mine is cooking, which I've sunk a fair amount of time into learning and perfecting
+        and experimenting with. A <span matTooltip="Roughly when I moved out on my own and realized I still had to eat!">
+        while ago</span> I realized that if I enjoy eating good food, I'd have to learn how to <em>make</em> good food.
+        That combined with a desire to lose weight and save money heavily promoted cooking &amp; baking.
+    </p>
+
+    <p>Below is a combination of useful utilities (mostly for my own use), pictures of cooking/baking creations of mine,
+    and notable recipes that I've found.</p>
+
+        <mat-tab-group [dynamicHeight]="true" mat-align-tabs="center">
+            <mat-tab label="Utilities">
+				<mat-accordion [multi]="true" displayMode="default">
+
+					<!-- Dough calculator -->
+					<mat-expansion-panel [expanded]="true" class="dough-calculator">
+						<mat-expansion-panel-header>
+							<mat-panel-title>Dough calculator</mat-panel-title>
+						</mat-expansion-panel-header>
+
+						<p>This calculator will determine how much flour, water, yeast, salt, and levain you should use
+						if you want to achieve <em>X</em>% hydration with baker's percentages of the remaining ingredients.</p>
+
+						<div class="base-mixture">
+							<mat-form-field (change)="calculateRecipe()" class="dough-mass">
+								<mat-label>Final mass</mat-label>
+								<input matInput type="number" [(ngModel)]="finalMass">
+								<span matSuffix>g</span>
+							</mat-form-field>
+							<mat-form-field class="levain-hydration">
+								<mat-label>Levain Hydration</mat-label>
+								<input matInput type="number" [(ngModel)]="levainHydration">
+								<span matSuffix>%</span>
+							</mat-form-field>
+						</div>
+
+						<table mat-table [dataSource]="dataSource">
+							<ng-container matColumnDef="name">
+								<th mat-header-cell *matHeaderCellDef>Ingredient</th>
+								<td mat-cell *matCellDef="let row">
+									<mat-form-field>
+										<input matInput type="text" [(ngModel)]="row.name">
+									</mat-form-field>
+								</td>
+							</ng-container>
+							<ng-container matColumnDef="type">
+								<th mat-header-cell *matHeaderCellDef>Type</th>
+								<td mat-cell *matCellDef="let row">
+									<mat-form-field appearance="outline">
+										<mat-select [(value)]="row.type" name="Type selector">
+											<mat-option *ngFor="let type of types" [value]="type">{{type}}</mat-option>
+										</mat-select>
+									</mat-form-field>
+								</td>
+							</ng-container>
+							<ng-container matColumnDef="percent">
+								<th mat-header-cell *matHeaderCellDef>Percent</th>
+								<td mat-cell *matCellDef="let row">
+									<mat-form-field (change)="calculateRecipe()" class="percent-field">
+										<input matInput type="number" [(ngModel)]="row.percent">
+										<span matSuffix>%</span>
+									</mat-form-field>
+								</td>
+							</ng-container>
+							<ng-container matColumnDef="mass">
+								<th mat-header-cell *matHeaderCellDef>Calculated Mass</th>
+								<td mat-cell *matCellDef="let row">{{row.mass | number:".0-1"}}g</td>
+							</ng-container>
+
+							<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+							<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+						</table>
+
+
+					</mat-expansion-panel>
+
+					<!-- Units converter -->
+					<mat-expansion-panel>
+						<mat-expansion-panel-header>
+							<mat-panel-title>Mass/volume converter</mat-panel-title>
+						</mat-expansion-panel-header>
+					</mat-expansion-panel>
+
+					<!-- Yield calculator -->
+					<mat-expansion-panel>
+						<mat-expansion-panel-header>
+							<mat-panel-title>Ingredient yield calculator</mat-panel-title>
+						</mat-expansion-panel-header>
+					</mat-expansion-panel>
+
+				</mat-accordion>
+            </mat-tab>
+
+			<mat-tab label="Pictures">
+				<app-carousel [images]="cookingCarouselImages" [shuffle]="false"></app-carousel>
+			</mat-tab>
+
+            <mat-tab label="Recipes">
+
+            </mat-tab>
+
+            <mat-tab label="Links & Resources">
+
+            </mat-tab>
+        </mat-tab-group>
 </div>

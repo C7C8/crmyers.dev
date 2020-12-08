@@ -1,5 +1,4 @@
-<mat-card>
-    <mat-card-title><h2>Gallery of Documents</h2></mat-card-title>
+<div class="carousel-container">
     <ngu-carousel #carousel [inputs]="carouselConfig" [dataSource]="images">
         <ngu-item NguCarouselItem *nguCarouselDef="let item;">
             <img [src]="item.image" [alt]="item.alt"/>
@@ -16,4 +15,4 @@
         <button mat-icon-button (click)="prev.click()"><mat-icon [inline]="true">keyboard_arrow_left</mat-icon></button>
         <button mat-icon-button (click)="next.click()"><mat-icon [inline]="true">keyboard_arrow_right</mat-icon></button>
     </div>
-</mat-card>
+</div>

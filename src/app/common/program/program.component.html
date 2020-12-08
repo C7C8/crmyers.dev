@@ -11,15 +11,17 @@
         </mat-panel-description>
     </mat-expansion-panel-header>
 
-    <div class="media-container" *ngIf="video">
-        <video #vid [src]="video" controls></video>
-    </div>
+	<ng-template matExpansionPanelContent>
+		<div class="media-container" *ngIf="video">
+			<video #vid [src]="video" controls></video>
+		</div>
 
-    <div class="media-container">
-        <img *ngIf="image" [src]="image" [alt]="name +'image preview'"/>
-    </div>
+		<div class="media-container">
+			<img *ngIf="image" [src]="image" [alt]="name +'image preview'"/>
+		</div>
 
-    <ng-content></ng-content>
+		<ng-content></ng-content>
+	</ng-template>
 
     <mat-action-row *ngIf="github || link">
         <a mat-mini-fab *ngIf="link" [matTooltip]="'View online at ' + link" [href]="link">
