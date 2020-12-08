@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DoughCalculatorComponent } from './dough-calculator.component';
 
@@ -6,7 +6,7 @@ describe('DoughCalculatorComponent', () => {
   let component: DoughCalculatorComponent;
   let fixture: ComponentFixture<DoughCalculatorComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ DoughCalculatorComponent ]
     })

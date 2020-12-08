@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MassVolumeConverterComponent } from './mass-volume-converter.component';
 
@@ -6,7 +6,7 @@ describe('MassVolumeConverterComponent', () => {
   let component: MassVolumeConverterComponent;
   let fixture: ComponentFixture<MassVolumeConverterComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MassVolumeConverterComponent ]
     })
