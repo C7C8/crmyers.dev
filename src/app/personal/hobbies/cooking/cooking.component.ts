@@ -20,7 +20,7 @@ class Ingredient {
 @Component({
 	selector: 'app-cooking',
 	templateUrl: './cooking.component.html',
-	styleUrls: ['./cooking.component.scss']
+	styleUrls: [ './cooking.component.scss' ]
 })
 export class CookingComponent implements OnInit {
 	cookingCarouselImages: Image[] = [
@@ -147,16 +147,16 @@ export class CookingComponent implements OnInit {
 
 	types = Object.keys(IngredientType).map(key => IngredientType[key]);
 	ingredients: Ingredient[] = [
-		{ name: 'White flour',			type: IngredientType.FLOUR, 	percent: 90 },
-		{ name: 'Whole wheat flour', 	type: IngredientType.FLOUR, 	percent: 10 },
-		{ name: 'Levain', 				type: IngredientType.LEVAIN, 	percent: 20 },
-		{ name: 'Water',  				type: IngredientType.LIQUID, 	percent: 50 },
-		{ name: 'Salt',         		type: IngredientType.OTHER, 	percent: 2.1 },
-		{ name: 'Yeast',				type: IngredientType.OTHER, 	percent: 0.2 },
+		{ name: 'White flour', type: IngredientType.FLOUR, percent: 90 },
+		{ name: 'Whole wheat flour', type: IngredientType.FLOUR, percent: 10 },
+		{ name: 'Levain', type: IngredientType.LEVAIN, percent: 20 },
+		{ name: 'Water', type: IngredientType.LIQUID, percent: 50 },
+		{ name: 'Salt', type: IngredientType.OTHER, percent: 2.1 },
+		{ name: 'Yeast', type: IngredientType.OTHER, percent: 0.2 },
 	];
 
 	dataSource = new MatTableDataSource(this.ingredients);
-	displayedColumns: string[] = ['name', 'type', 'percent', 'mass'];
+	displayedColumns: string[] = [ 'name', 'type', 'percent', 'mass' ];
 
 	ngOnInit() {
 		this.calculateRecipe();
@@ -164,8 +164,8 @@ export class CookingComponent implements OnInit {
 
 	private getTotalOfType(type: IngredientType): number {
 		return _.sum(this.ingredients
-					.filter(ingredient => ingredient.type === type)
-					.map(ingredient => ingredient.percent));
+			.filter(ingredient => ingredient.type === type)
+			.map(ingredient => ingredient.percent));
 	}
 
 	calculateRecipe(): void {
@@ -203,14 +203,14 @@ export class CookingComponent implements OnInit {
 	}
 
 	addIngredient(): void {
-		this.ingredients.push({ name: 'Unknown', type: IngredientType.OTHER, percent: 0 })
-		this.dataSource = new MatTableDataSource<Ingredient>(this.ingredients)
+		this.ingredients.push({ name: 'Unknown', type: IngredientType.OTHER, percent: 0 });
+		this.dataSource = new MatTableDataSource<Ingredient>(this.ingredients);
 	}
 
 	deleteIngredient(): void {
 		if (this.ingredients.length > 1) {
-			this.ingredients.pop()
-			this.dataSource = new MatTableDataSource<Ingredient>(this.ingredients)
+			this.ingredients.pop();
+			this.dataSource = new MatTableDataSource<Ingredient>(this.ingredients);
 		}
 	}
 }

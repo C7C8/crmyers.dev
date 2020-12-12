@@ -1,17 +1,17 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HomeCarouselImages } from './HomeCarouselImages';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+	selector: 'app-home',
+	templateUrl: './home.component.html',
+	styleUrls: [ './home.component.scss' ]
 })
 export class HomeComponent implements OnInit {
-    images = HomeCarouselImages;
+	images = HomeCarouselImages;
 
-    constructor() {
-    }
+	constructor() {
+	}
 
-    ngOnInit(): void {
-    }
+	ngOnInit(): void {
+	}
 }
