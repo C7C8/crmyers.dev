@@ -9,7 +9,7 @@ import { map, startWith } from 'rxjs/operators';
 import * as _ from 'lodash';
 
 @Component({
-  selector: 'app-programs-list-searchable',
+  selector: 'content-list-searchable',
   templateUrl: './programs-list-searchable.component.html',
   styleUrls: ['./programs-list-searchable.component.scss']
 })

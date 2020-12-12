@@ -24,12 +24,12 @@
     <em>Looking for <a [routerLink]="['/personal/programs']">programs</a> instead?</em>
 </p>
 
-<app-programs-list-searchable>
-    <app-program name="Eilat Transportation Website"
-                 github="c7c8/Eilat-Transport-Map-Site"
-                 year="2019"
-                 [tags]="['Data viz', 'MySQL', 'GCP', 'College']"
-                 image="/assets/personal/code-projects/eilat-transport.png">
+<content-list-searchable>
+    <content-entry name="Eilat Transportation Website"
+                   github="c7c8/Eilat-Transport-Map-Site"
+                   year="2019"
+                   [tags]="['Data viz', 'MySQL', 'GCP', 'College']"
+                   image="/assets/personal/code-projects/eilat-transport.png">
         <p>
             This website was a group collaboration as part of my IQP (Interactive Qualifying Project) at Worcester
             Polytechnic Institute. I was responsible for the UI and flights code, while my partner-in-code was
@@ -49,13 +49,13 @@
             FlightStats API, the site is no longer online, but you can view the source for the website at the link below,
             and the source for the server <a href="https://github.com/c7c8/Eilat-Transport-Map-Server">here</a>.
         </p>
-    </app-program>
+    </content-entry>
 
-    <app-program name="Twittalyzer"
-                 github="c7c8/Twitter-Analysis-Site"
-                 year="2018"
-                 [tags]="['Data viz', 'MySQL', 'College']"
-                 image="/assets/personal/code-projects/twittalyzer.png">
+    <content-entry name="Twittalyzer"
+                   github="c7c8/Twitter-Analysis-Site"
+                   year="2018"
+                   [tags]="['Data viz', 'MySQL', 'College']"
+                   image="/assets/personal/code-projects/twittalyzer.png">
         <p>
             Inspired by controversies erupting over usage of Twitter, <b>"Twittalyzer"</b> is a web app that implements
             simple scraping of a user's tweets, which it runs basic statistics on, generates random tweets from that user
@@ -70,13 +70,13 @@
             <em>You can find the code for the website at the link below, and the server side API + data analysis code
             <a href="https://github.com/c7c8/Twitter-Analysis-Server">here</a>.</em>
         </p>
-    </app-program>
+    </content-entry>
 
-    <app-program name="Secret 31"
-                 github="c7c8/Secrets-Site"
-                 year="2018"
-                 [tags]="['Cryptography', 'MySQL', 'College']"
-                 image="/assets/personal/code-projects/secret-31.png">
+    <content-entry name="Secret 31"
+                   github="c7c8/Secrets-Site"
+                   year="2018"
+                   [tags]="['Cryptography', 'MySQL', 'College']"
+                   image="/assets/personal/code-projects/secret-31.png">
 
         <p>
             <b>Secret 31</b> is a simple website for allowing two people to confirm they each know something while never
@@ -98,14 +98,14 @@
 
         <p>You can find the code for the website at the link below; the more interesting server side API can be found
         <a href="https://github.com/c7c8/secrets-server">here</a>.</p>
-    </app-program>
+    </content-entry>
 
-    <app-program name="CS 3733 API Repository"
-                 github="c7c8/SoftEng-API-Site"
-                 year="2018"
-                 link="https://apisite.crmyers.dev"
-                 [tags]="['AWS', 'CRUD', 'Users']"
-                 image="/assets/personal/code-projects/apisite.png">
+    <content-entry name="CS 3733 API Repository"
+                   github="c7c8/SoftEng-API-Site"
+                   year="2018"
+                   link="https://apisite.crmyers.dev"
+                   [tags]="['AWS', 'CRUD', 'Users']"
+                   image="/assets/personal/code-projects/apisite.png">
         <p>
             The <b>API Repository</b> site (a misnomer carried over from the language used in-class) hosts a Maven
             repositories for students in CS 3733 Software Engineering at Worcester Poyltechnic Institute to submit Java
@@ -121,6 +121,6 @@
             used MySQL as a database, but, since the physical server I used to host it was stolen, I migrated the
             entire site over to Amazon Web Services (AWS), where for cost reasons it now uses DynamoDB.
         </p>
-    </app-program>
-</app-programs-list-searchable>
+    </content-entry>
+</content-list-searchable>
 </div>

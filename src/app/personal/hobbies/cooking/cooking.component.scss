@@ -4,6 +4,14 @@ mat-expansion-panel {
 
 .dough-calculator {
 
+  .base-mixture {
+	display: flex;
+
+	.filler {
+	  flex-grow: 1;
+	}
+  }
+
   input[type=number]::-webkit-inner-spin-button,
   input[type=number]::-webkit-outer-spin-button {
 	-webkit-appearance: none;

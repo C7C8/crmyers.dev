@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
-    selector: 'app-program',
+    selector: 'content-entry',
     templateUrl: './program.component.html',
     styleUrls: ['./program.component.scss']
 })

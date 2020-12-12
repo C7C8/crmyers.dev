@@ -14,11 +14,11 @@ of my work are similarly open to learn from.</p>
 
 <p><em>Looking for <a [routerLink]="['/personal/webdev']">web projects</a> instead?</em></p>
 
-<app-programs-list-searchable>
-        <app-program name="Rust-Brainfuck"
-                     [tags]="['Rust']"
-                     year="2019"
-                     github="c7c8/rust-brainfuck">
+<content-list-searchable>
+        <content-entry name="Rust-Brainfuck"
+					   [tags]="['Rust']"
+					   year="2019"
+					   github="c7c8/rust-brainfuck">
             <p><b>Rust Brainfuck</b> is a simple, 88-line Brainfuck interpreter written in Rust as a get-to-know-the-language
             exercise. I've made it available because it is, after all, a working interpreter. I haven't gotten <em>too</em>
             far with Rust just yet, but one day I hope to!</p>
@@ -30,12 +30,12 @@ of my work are similarly open to learn from.</p>
             ever is extraordinarily simple. This one has a little bit of extra error handling and work done to allow integer
             wraparound (which if I recall correctly would otherwise be a problem), but otherwise it falls in line with all
             other interpreters.</p>
-        </app-program>
+        </content-entry>
 
-        <app-program name="Deuterium Knowledge Engine"
-                     [tags]="['WIP', 'Java', 'GUI']"
-                     year="2019"
-                     github="c7c8/deuterium">
+        <content-entry name="Deuterium Knowledge Engine"
+					   [tags]="['WIP', 'Java', 'GUI']"
+					   year="2019"
+					   github="c7c8/deuterium">
             <p><b><em>Warning!</em> Big infodump incoming!</b></p>
 
             <p>
@@ -75,24 +75,24 @@ of my work are similarly open to learn from.</p>
                 have a full, intuitive and modern looking UI, plus numerous features to assist in the learning and
                 researching .
             </p>
-        </app-program>
+        </content-entry>
 
-        <app-program name="CS 3733 API Update Checker"
-                     [tags]="['Java', 'Network']"
-                     year="2018"
-                     github="c7c8/SoftEng-API-UpdateChecker">
+        <content-entry name="CS 3733 API Update Checker"
+					   [tags]="['Java', 'Network']"
+					   year="2018"
+					   github="c7c8/SoftEng-API-UpdateChecker">
             The <b>CS 3733 API Update Checker</b> is a simple Java library for teams of students taking Professor Wong's
             Software Engineering class at Worcester Polytechnic Institute. As part of the class, teams create and share Java
             libraries for other teams to integrate into their projects. I built a website that hosts a Maven repository
             containing all of these APIs, which makes it easier for teams to share and update their libraries. This library
             simply checks the server to see if an update for a given API is available, for instance to help a team prompt
             the user into updating.
-        </app-program>
+        </content-entry>
 
-        <app-program name="PDP-1186"
-                     [tags]="['C++', 'WIP']"
-                     year="2018"
-                     github="c7c8/pdp-1186">
+        <content-entry name="PDP-1186"
+					   [tags]="['C++', 'WIP']"
+					   year="2018"
+					   github="c7c8/pdp-1186">
            <b>PDP-1186</b> is a long-since abandoned project to create an emulator for an old minicomputer called the
             PDP-11. It was part self-education (I <em>really</em> like systems programming), part hack-a-day, part
             old-computer enthusiasm &mdash; the PDP-11 helped inspire crucial elements of the x86 architecture, and was
@@ -102,13 +102,13 @@ of my work are similarly open to learn from.</p>
             shortly afterwards, but haven't picked it up since. I likely won't in the future considering that
             <a href="www.de.ioccc.org/2018/mills/hint.html">in 2018 someone won the IOCCC Best in Show for
             a very tiny PDP-7 emulator</a>.
-        </app-program>
+        </content-entry>
 
-        <app-program name="MSP430 Tetris"
-                     [tags]="['C', 'Embedded']"
-                     year="2018"
-                     github="c7c8/msp430-tetris"
-                     video="/assets/personal/code-projects/msp430-tetris.m4v">
+        <content-entry name="MSP430 Tetris"
+					   [tags]="['C', 'Embedded']"
+					   year="2018"
+					   github="c7c8/msp430-tetris"
+					   video="/assets/personal/code-projects/msp430-tetris.m4v">
             <p>
                 In 2018 I took a class on embedded computing, which was really just a class on learning about one
                 specific device instead of generals of embedded computing. Since it wasn't very interesting I ported
@@ -130,13 +130,13 @@ of my work are similarly open to learn from.</p>
                 &mdash; the music, the keyboard controls, timing and interrupts, etc. &mdash; is mine. Unfortunately
                 I couldn't include the display or keypad driver code since they belong to Worcester Poyltechnic Institute.
             </p>
-        </app-program>
+        </content-entry>
 
-        <app-program name="CS 3733 Hospital Navigator"
-                     [tags]="['Java', 'GUI', 'College']"
-                     year="2017"
-                     github="c7c8/CS3733-HospitalProject"
-                     image="/assets/personal/code-projects/hospital-navigator.png">
+        <content-entry name="CS 3733 Hospital Navigator"
+					   [tags]="['Java', 'GUI', 'College']"
+					   year="2017"
+					   github="c7c8/CS3733-HospitalProject"
+					   image="/assets/personal/code-projects/hospital-navigator.png">
             <p>
                 <b>The Hospital Navigator</b> project was constructed by a team of 9 students at Worcester Polytechnic
                 Institute, of which I had the position of lead developer. The application is designed to provide
@@ -146,13 +146,13 @@ of my work are similarly open to learn from.</p>
                 they want. Other features include a "fire exit" mode, which directs users to the nearest exit, a
                 map editor, multiple pathfinding modes, and the option to use only stairs or only elevators.
             </p>
-        </app-program>
+        </content-entry>
 
-        <app-program name="Pathviz 2"
-                     [tags]="['C++', 'GUI', 'High School']"
-                     year="2016"
-                     github="c7c8/Pathviz-2"
-                     image="/assets/personal/code-projects/pathviz2.png">
+        <content-entry name="Pathviz 2"
+					   [tags]="['C++', 'GUI', 'High School']"
+					   year="2016"
+					   github="c7c8/Pathviz-2"
+					   image="/assets/personal/code-projects/pathviz2.png">
             <p>
                 <b>Pathviz 2</b> is the third iteration of a pathfinding
                 algorithm visualizer I built in my junior year of high school. It's designed to show how two common
@@ -170,13 +170,13 @@ of my work are similarly open to learn from.</p>
                 straight-up didn't work, so here we are on the third version, which is much more nicely architected
                 and easy to use.
             </p>
-        </app-program>
+        </content-entry>
 
-        <app-program name="N-Ball Simulator"
-                     [tags]="['C++', 'GUI', 'High School']"
-                     year="2015"
-                     github="nball-sim"
-                     image="/assets/personal/code-projects/nball-sim.png">
+        <content-entry name="N-Ball Simulator"
+					   [tags]="['C++', 'GUI', 'High School']"
+					   year="2015"
+					   github="nball-sim"
+					   image="/assets/personal/code-projects/nball-sim.png">
             <p>
                 <b>N-Ball Simulator</b> is the second version of a Newtonian gravity simulator I built, at first for fun,
                 but then later adapted for my senior year physics project in high school. The simulator allows you to
@@ -195,6 +195,6 @@ of my work are similarly open to learn from.</p>
                 and coalescence time, and that if a simulation had too much kinetic energy and not enough mass it simply
                 wouldn't coalesce.
             </p>
-        </app-program>
-</app-programs-list-searchable>
+        </content-entry>
+</content-list-searchable>
 </div>

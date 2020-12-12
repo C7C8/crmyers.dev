@@ -1,108 +1,188 @@
 <div class="normal-content">
-    <h1>Cooking &amp; Baking</h1>
-    <p>
-        A particular hobby of mine is cooking, which I've sunk a fair amount of time into learning and perfecting
-        and experimenting with. A <span matTooltip="Roughly when I moved out on my own and realized I still had to eat!">
+	<h1>Cooking &amp; Baking</h1>
+	<p>
+		A particular hobby of mine is cooking, which I've sunk a fair amount of time into learning and perfecting
+		and experimenting with. A <span matTooltip="Roughly when I moved out on my own and realized I still had to eat!">
         while ago</span> I realized that if I enjoy eating good food, I'd have to learn how to <em>make</em> good food.
-        That combined with a desire to lose weight and save money heavily promoted cooking &amp; baking.
-    </p>
+		That combined with a desire to <span matTooltip="Turns out that cooking also inspires eating, though...">lose
+		weight</span> and save money heavily promoted cooking &amp; baking.
+	</p>
 
-    <p>Below is a combination of useful utilities (mostly for my own use), pictures of cooking/baking creations of mine,
-    and notable recipes that I've found.</p>
+	<p>Below is a combination of useful utilities (mostly for my own use), pictures of cooking/baking creations of mine,
+		and notable recipes that I've found.</p>
 
-        <mat-tab-group [dynamicHeight]="true" mat-align-tabs="center">
-            <mat-tab label="Utilities">
-				<mat-accordion [multi]="true" displayMode="default">
-
-					<!-- Dough calculator -->
-					<mat-expansion-panel [expanded]="true" class="dough-calculator">
-						<mat-expansion-panel-header>
-							<mat-panel-title>Dough calculator</mat-panel-title>
-						</mat-expansion-panel-header>
-
-						<p>This calculator will determine how much flour, water, yeast, salt, and levain you should use
-						if you want to achieve <em>X</em>% hydration with baker's percentages of the remaining ingredients.</p>
-
-						<div class="base-mixture">
-							<mat-form-field (change)="calculateRecipe()" class="dough-mass">
-								<mat-label>Final mass</mat-label>
-								<input matInput type="number" [(ngModel)]="finalMass">
-								<span matSuffix>g</span>
-							</mat-form-field>
-							<mat-form-field class="levain-hydration">
-								<mat-label>Levain Hydration</mat-label>
-								<input matInput type="number" [(ngModel)]="levainHydration">
-								<span matSuffix>%</span>
-							</mat-form-field>
-						</div>
-
-						<table mat-table [dataSource]="dataSource">
-							<ng-container matColumnDef="name">
-								<th mat-header-cell *matHeaderCellDef>Ingredient</th>
-								<td mat-cell *matCellDef="let row">
-									<mat-form-field>
-										<input matInput type="text" [(ngModel)]="row.name">
-									</mat-form-field>
-								</td>
-							</ng-container>
-							<ng-container matColumnDef="type">
-								<th mat-header-cell *matHeaderCellDef>Type</th>
-								<td mat-cell *matCellDef="let row">
-									<mat-form-field appearance="outline">
-										<mat-select [(value)]="row.type" name="Type selector">
-											<mat-option *ngFor="let type of types" [value]="type">{{type}}</mat-option>
-										</mat-select>
-									</mat-form-field>
-								</td>
-							</ng-container>
-							<ng-container matColumnDef="percent">
-								<th mat-header-cell *matHeaderCellDef>Percent</th>
-								<td mat-cell *matCellDef="let row">
-									<mat-form-field (change)="calculateRecipe()" class="percent-field">
-										<input matInput type="number" [(ngModel)]="row.percent">
-										<span matSuffix>%</span>
-									</mat-form-field>
-								</td>
-							</ng-container>
-							<ng-container matColumnDef="mass">
-								<th mat-header-cell *matHeaderCellDef>Calculated Mass</th>
-								<td mat-cell *matCellDef="let row">{{row.mass | number:".0-1"}}g</td>
-							</ng-container>
-
-							<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-							<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-						</table>
-
-
-					</mat-expansion-panel>
-
-					<!-- Units converter -->
-					<mat-expansion-panel>
-						<mat-expansion-panel-header>
-							<mat-panel-title>Mass/volume converter</mat-panel-title>
-						</mat-expansion-panel-header>
-					</mat-expansion-panel>
-
-					<!-- Yield calculator -->
-					<mat-expansion-panel>
-						<mat-expansion-panel-header>
-							<mat-panel-title>Ingredient yield calculator</mat-panel-title>
-						</mat-expansion-panel-header>
-					</mat-expansion-panel>
-
-				</mat-accordion>
-            </mat-tab>
-
-			<mat-tab label="Pictures">
+	<mat-tab-group [dynamicHeight]="true" mat-align-tabs="center">
+		<mat-tab label="Pictures">
+			<mat-card>
 				<app-carousel [images]="cookingCarouselImages" [shuffle]="false"></app-carousel>
-			</mat-tab>
+			</mat-card>
+		</mat-tab>
 
-            <mat-tab label="Recipes">
+		<mat-tab label="Recipes">
+			<mat-card>
+				<mat-card-title>Recipes</mat-card-title>
+				<mat-card-content>
+					<p>Below is a small collection of recipes that I've accumulated, which I've been particularly fond of.
+						Recipes are tagged by generic type, so you can search for the kind of recipe you're looking for.</p>
 
-            </mat-tab>
+					<p><em>This list is still under construction and will be expanded as I scour my recipes list for the
+					truly exceptional ones.</em></p>
 
-            <mat-tab label="Links & Resources">
+					<content-list-searchable>
+							<content-entry name="Overnight Country Blonde" [tags]="['Bread']"
+										   link="https://kensartisan.com/flour-water-salt-yeast"
+										   image="/assets/personal/cooking/fancy-bread-2.jpg">
+								<p>From Ken Forkish's excellent book <em><a href="https://kensartisan.com/flour-water-salt-yeast">
+								Flour Water Salt Yeast</a></em>, although with a slight modification. I never got the
+								whopping 78% hydration to work for me, so I reduced to 68% hydration. I also typically
+								can't find rye flour in the grocery stores near me, so I substitute whole wheat flour.</p>
 
-            </mat-tab>
-        </mat-tab-group>
+								<p>If you click one tab over to the dough calculator, give it 90% white flour, 10% whole
+									wheat, 68% hydration, 2.2% salt, and 12% levain. A total mass of 1500g should yield
+									two healthy size loaves. Make sure to fold this one enough and give it a warm spot to
+									rise, and it'll come out with a nice sour tang to it.
+								</p>
+						</content-entry>
+						<content-entry name="Smash Burgers" [tags]="['Dinner', 'Beef', 'One-pan cooking']"
+									   image="/assets/personal/cooking/smash-burgers.jpg">
+							<p>"Smash burgers" are simple to make: take a griddle or a pan and heat it up as hot as you're
+							comfortable going (I get mine to about 450 or so), lightly sprinkle a bit of vegetable oil on to
+							get it started, then put a 1/4 lb ball of ground beef mix on and smash it down into the pan with
+							a rigid spatula or a grill press. When making mix for the patties, I usually start with 1-2 lbs of
+							ground beef (fattier is better here), a quarter cup or so of bread crumbs, some salt, pepper,
+							Worcestershire sauce, and then I add any other mixins I feel like (e.g. smoked paprika, cheese,
+								or onion powder.</p>
+
+							<p>Flip after about a minute or two of cooking, put cheese on the upturned side, cook for another minute,
+							and you're done! The hotter your pan is the less you have to cook them to achieve a nice browned,
+							nigh-crispy taste. If you want medium rare and moderately thin burgers, get your pan to scalding hot
+							and cook <em><b>fast!</b></em> I highly recommend a good cast-iron grill press for the initial smash,
+							but be wary of leaving it on while cooking or you run the risk of squishing the juice out of the burgers.</p>
+						</content-entry>
+
+						<content-entry name="Really Good Pan Pizza" [tags]="['Dinner', 'One-pan cooking']"
+									   image="/assets/personal/cooking/pan-pizza-2.jpg">
+							Achieving a really good pan pizza isn't a specific recipe per se, but a series of tips of
+							how to make <em>that</em> recipe you always go to really pop.
+
+							<h2>Dough</h2>
+							<p>You can use most any dough recipe (I highly recommend the ones in the aforementioned
+							<em>Flour Water Salt Yeast</em>), but I would err on the side of lower hydration and a longer
+								bulk ferment time, to add to the taste of the dough. One essential deviation from norm, though:
+							<b>add a LOT of garlic powder to your dough!</b> For a 1500g recipe I usually add a 1-2 tbsp, to put it in
+							perspective. It adds that extra missing flavor you always taste at excellent pizza parlours. Don't
+							be afraid to scatter a tiny bit on the crust of the pizza too, after you put the toppings on.
+							Basil and rosemary are also excellent additions to a good dough if you want to make it more herbal.</p>
+
+							<h2>Sauce</h2>
+							<p>Don't buy your sauce pre-made, make it from scratch! It's much easier than you think. My simple starter
+							for pizza sauce begins with olive oil on the bottom of my saucepan, which I sautee a few minced cloves of garlic,
+							1 tbsp of basil and 1 tbsp of oregano in, until it smells very fragrent. Then I add about 28oz of
+							canned tomato sauce and simmer for an hour or two, with about 0.5 tbsp of salt and a few dashes of sugar
+							(to neutralize acidity a bit).</p>
+
+							<h2>Cheese</h2>
+							I used to avoid adding mozzarella to my pizza because I typically don't like the stuff, but I've learned
+							its properties during baking are important. Typically I go for a blend of mozzarella, cheddar, and parmesan.
+
+							<h2>Baking</h2>
+							<p>A well-seasoned cast iron pan should be fine with cornmeal instead of olive oil rubbed on the bottom,
+							so I highly recommend that instead. Cornmeal is not only healthier (less oil) but gives the crust on the
+							bottom a much better texture in my opinion, as it won't have a "fried"-esque effect to it.</p>
+
+							<p>Set your oven to the absolute hottest temperature it can go, and place your pizza around 6
+							inches beneath the top burner. Cook for about ten minutes, then put the broiler on HIGH and cook
+							for another 2-3 minutes. The broiler adds a nice darkened crust on top and brings out a lot of
+							extra flavor you didn't even know was there; it'll do marvellous things to pepperoni (see picture on
+							left) if you let it!</p>
+						</content-entry>
+
+						<content-entry name="Pastrami" image="/assets/personal/cooking/pastrami.jpg"
+									   [tags]="['Beef', 'Long prep']" link="https://amazingribs.com/tested-recipes/beef-and-bison-recipes/home-made-pastrami-thats-close-katzs-recipe">
+							This pastrami is by far some of the best meat I've ever tasted. It's incredibly flavorful, pulls apart
+							easily, has a fantastic "crust", and makes for superb sandwiches. Just make sure you brine it enough,
+							and perhaps add a litttttle bit more coriander than the recipe calls for. There's nothing more that
+							I can add to this beyond what the originial recipe at Amazing Ribs has to say. If you're looking for the correct sequence of recipes,
+							<a href="https://amazingribs.com/tested-recipes/beef-and-bison-recipes/home-made-corned-beef-recipe">make the corned beef first</a>,
+							then assemble <a href="https://amazingribs.com/tested-recipes/spice-rubs-and-pastes/katzs-pastrami-rub">the rub</a>, and
+							finally follow the instructions <a href="https://amazingribs.com/tested-recipes/beef-and-bison-recipes/home-made-pastrami-thats-close-katzs-recipe"> here</a>.
+							If you don't have a smoker, you can cook it at home just as easily, although it won't have a smokey taste.
+							Be wary of the desalination instructions, I followed them and I ended up with slightly under-salted pastrami.
+						</content-entry>
+					</content-list-searchable>
+
+				</mat-card-content>
+			</mat-card>
+		</mat-tab>
+
+		<mat-tab label="Dough Calculator">
+			<mat-card>
+				<mat-card-title>Dough Recipe Calculator</mat-card-title>
+				<mat-card-content class="dough-calculator">
+					<p>This calculator will determine how much flour, water, yeast, salt, and levain you should use
+						if you want to achieve <em>X</em>% hydration with baker's percentages of the remaining ingredients.
+						Note that the "final mass" is just the water + flour total mass, so your actual final will be
+						slightly over.
+					</p>
+
+					<div class="base-mixture">
+						<mat-form-field (change)="calculateRecipe()" class="dough-mass">
+							<mat-label>Final mass</mat-label>
+							<input matInput type="number" [(ngModel)]="finalMass">
+							<span matSuffix>g</span>
+						</mat-form-field>
+						<mat-form-field class="levain-hydration">
+							<mat-label>Levain hydration</mat-label>
+							<input matInput type="number" [(ngModel)]="levainHydration">
+							<span matSuffix>%</span>
+						</mat-form-field>
+						<span class="filler"></span>
+						<a mat-mini-fab matTooltip="Add ingredient to bottom" (click)="addIngredient()">
+							<mat-icon [inline]="true">add</mat-icon>
+						</a>
+						<a mat-mini-fab matTooltip="Remove ingredient from bottom" (click)="deleteIngredient()">
+							<mat-icon [inline]="true">remove</mat-icon>
+						</a>
+					</div>
+
+					<table mat-table [dataSource]="dataSource">
+						<ng-container matColumnDef="name">
+							<th mat-header-cell *matHeaderCellDef>Ingredient</th>
+							<td mat-cell *matCellDef="let row">
+								<mat-form-field>
+									<input matInput type="text" [(ngModel)]="row.name">
+								</mat-form-field>
+							</td>
+						</ng-container>
+						<ng-container matColumnDef="type">
+							<th mat-header-cell *matHeaderCellDef>Type</th>
+							<td mat-cell *matCellDef="let row">
+								<mat-form-field appearance="outline">
+									<mat-select [(value)]="row.type" name="Type selector">
+										<mat-option *ngFor="let type of types" [value]="type">{{type}}</mat-option>
+									</mat-select>
+								</mat-form-field>
+							</td>
+						</ng-container>
+						<ng-container matColumnDef="percent">
+							<th mat-header-cell *matHeaderCellDef>Percent</th>
+							<td mat-cell *matCellDef="let row">
+								<mat-form-field (change)="calculateRecipe()" class="percent-field">
+									<input matInput type="number" [(ngModel)]="row.percent">
+									<span matSuffix>%</span>
+								</mat-form-field>
+							</td>
+						</ng-container>
+						<ng-container matColumnDef="mass">
+							<th mat-header-cell *matHeaderCellDef>Calculated Mass</th>
+							<td mat-cell *matCellDef="let row">{{row.mass | number:".0-1"}}g</td>
+						</ng-container>
+
+						<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+						<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+					</table>
+				</mat-card-content>
+			</mat-card>
+		</mat-tab>
+	</mat-tab-group>
 </div>

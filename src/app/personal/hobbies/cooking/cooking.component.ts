@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Image } from '../../../common/defs';
 import * as _ from 'lodash';
 import { MatTableDataSource } from '@angular/material/table';
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
-import { ErrorStateMatcher } from '@angular/material/core';
 
 enum IngredientType {
 	FLOUR = 'Flour',
@@ -30,6 +28,11 @@ export class CookingComponent implements OnInit {
 			image: '/assets/personal/cooking/fancy-bread-2.jpg',
 			alt: 'Fancy bread',
 			caption: 'Bread with fancy hatching on top.'
+		},
+		{
+			image: '/assets/personal/cooking/pastrami.jpg',
+			alt: 'Fancy pastrami',
+			caption: 'Homemade cured and smoked pastrami'
 		},
 		{
 			image: '/assets/personal/cooking/fancy-bread.jpg',
@@ -155,7 +158,6 @@ export class CookingComponent implements OnInit {
 	dataSource = new MatTableDataSource(this.ingredients);
 	displayedColumns: string[] = ['name', 'type', 'percent', 'mass'];
 
-
 	ngOnInit() {
 		this.calculateRecipe();
 	}
@@ -197,6 +199,18 @@ export class CookingComponent implements OnInit {
 		const levainPercentage = this.getTotalOfType(IngredientType.LEVAIN);
 		for (const ingredient of this.ingredients.filter(i => i.type === IngredientType.LEVAIN)) {
 			ingredient.mass = (ingredient.percent / levainPercentage) * levainMass;
+		}
+	}
+
+	addIngredient(): void {
+		this.ingredients.push({ name: 'Unknown', type: IngredientType.OTHER, percent: 0 })
+		this.dataSource = new MatTableDataSource<Ingredient>(this.ingredients)
+	}
+
+	deleteIngredient(): void {
+		if (this.ingredients.length > 1) {
+			this.ingredients.pop()
+			this.dataSource = new MatTableDataSource<Ingredient>(this.ingredients)
 		}
 	}
 }
