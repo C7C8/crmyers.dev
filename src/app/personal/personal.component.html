@@ -25,16 +25,7 @@
     </mat-menu>
 
     <!-- Game stuff menu -->
-    <button mat-button [matMenuTriggerFor]="gamesMenu">Random Game Things</button>
-    <mat-menu #gamesMenu>
-        <button mat-menu-item [routerLink]="['/personal/games/minecraft']">Minecraft</button>
-        <button mat-menu-item [routerLink]="['/personal/games/factorio']">Factorio</button>
-        <button mat-menu-item [routerLink]="['/personal/games/space-engineers']">Space Engineers</button>
-        <button mat-menu-item [routerLink]="['/personal/games/ksp']">Kerbal Space Program</button>
-        <button mat-menu-item [routerLink]="['/personal/games/terraria']">Terraria</button>
-        <button mat-menu-item [routerLink]="['/personal/games/other']">Other things</button>
-    </mat-menu>
-
+    <button mat-button [routerLink]="['/personal/games']">Random Videogame Things</button>
     <button mat-button [routerLink]="['/personal/travel']">Travel photos</button>
     <button mat-button [routerLink]="['/personal/interesting-stuff']">Interesting Links &amp; Stuff I Like</button>
     <button mat-button [routerLink]="['/personal/contact']">Contact</button>

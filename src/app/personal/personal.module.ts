@@ -23,12 +23,6 @@ import { WebdevComponent } from './computers/webdev/webdev.component';
 import { LatexComponent } from './hobbies/latex/latex.component';
 import { BlenderComponent } from './hobbies/blender/blender.component';
 import { CookingComponent } from './hobbies/cooking/cooking.component';
-import { MinecraftComponent } from './games/minecraft/minecraft.component';
-import { FactorioComponent } from './games/factorio/factorio.component';
-import { SpaceEngineersComponent } from './games/space-engineers/space-engineers.component';
-import { KspComponent } from './games/ksp/ksp.component';
-import { TerrariaComponent } from './games/terraria/terraria.component';
-import { GamesOtherComponent } from './games/games-other/games-other.component';
 import { TravelComponent } from './travel/travel.component';
 import { InterestingStuffComponent } from './interesting-stuff/interesting-stuff.component';
 import { ProgramComponent } from '../common/program/program.component';
@@ -49,36 +43,32 @@ import { MassVolumeConverterComponent } from './hobbies/cooking/mass-volume-conv
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
+import { GamesComponent } from './games/games.component';
 
 
 @NgModule({
-    declarations: [
-        PersonalComponent,
-        HomeComponent,
-        ContactComponent,
-        RicingComponent,
-        ProgramsComponent,
-        WebdevComponent,
-        LatexComponent,
-        BlenderComponent,
-        CookingComponent,
-        MinecraftComponent,
-        FactorioComponent,
-        SpaceEngineersComponent,
-        KspComponent,
-        TerrariaComponent,
-        GamesOtherComponent,
-        TravelComponent,
-        InterestingStuffComponent,
-        ProgramComponent,
-        ProgramsListSearchableComponent,
-        CarouselComponent,
-        GardeningComponent,
-        ImageCardComponent,
-        SchoolNotesComponent,
-        DoughCalculatorComponent,
-        MassVolumeConverterComponent,
-    ],
+	declarations: [
+		PersonalComponent,
+		HomeComponent,
+		ContactComponent,
+		RicingComponent,
+		ProgramsComponent,
+		WebdevComponent,
+		LatexComponent,
+		BlenderComponent,
+		CookingComponent,
+		TravelComponent,
+		InterestingStuffComponent,
+		ProgramComponent,
+		ProgramsListSearchableComponent,
+		CarouselComponent,
+		GardeningComponent,
+		ImageCardComponent,
+		SchoolNotesComponent,
+		DoughCalculatorComponent,
+		MassVolumeConverterComponent,
+		GamesComponent,
+	],
 	imports: [
 		CommonModule,
 		PersonalRoutingModule,
@@ -107,7 +97,7 @@ import { MatSelectModule } from '@angular/material/select';
 		MatTableModule,
 		MatSelectModule
 	],
-    schemas: [ NO_ERRORS_SCHEMA ]
+	schemas: [ NO_ERRORS_SCHEMA ]
 })
 export class PersonalModule {
 }
