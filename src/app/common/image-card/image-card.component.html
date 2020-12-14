@@ -1,9 +1,7 @@
 <mat-card (click)="showDetails()">
 	<mat-card-header>
-		<mat-card-title>
-			{{title}}
-			<span *ngIf="date" class="date">{{date}}</span>
-		</mat-card-title>
+		<mat-card-title>{{title}}</mat-card-title>
+		<mat-card-subtitle *ngIf="date" class="date">{{date}}</mat-card-subtitle>
 	</mat-card-header>
 
 	<img mat-card-image [src]="img" [alt]="img">
