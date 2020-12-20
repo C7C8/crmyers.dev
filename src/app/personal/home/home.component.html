@@ -1,0 +1,57 @@
+<div class="content-container">
+	<div class="intro">
+		<h1>Home</h1>
+		<p>Hi! I'm <span matTooltip="At least, I think">Chris Myers</span>, and I guess this is my
+			homepage! It's filled with stuff I've done, things I've worked on, and other miscellaneous
+			things I enjoy, so take a look around!</p>
+
+		<p>I have a liking for programming, games, and 3D (CG) art &mdash; really, anything that involves
+			computers &mdash; not to mention data <em>stuff</em>, and less frequently <span
+					matTooltip="Especially of cats">
+        photography</span>, writing, and the occasional hike or long walk. Music is in there
+			somewhere... but I'm a little odd in that area, so let's not go there.</p>
+
+		<p>To check out some of things on this site, just check the header. Hopefully you'll find
+			something I like, and I'm always adding more!</p>
+	</div>
+
+	<div class="photo">
+		<mat-card>
+			<img src="/assets/personal/me.jpg" alt="me">
+			<span class="caption">Background: Kibbutz Ketura, Israel</span>
+		</mat-card>
+	</div>
+
+	<div class="carousel">
+		<mat-card>
+			<app-carousel [images]="images"></app-carousel>
+		</mat-card>
+	</div>
+
+	<div class="history">
+		<br/>
+		<h2>About me</h2>
+
+		<p>Since June 2020 I've worked as a software engineer for <b>Amazon Robotics</b> in North Reading, MA,
+			after graduating from Worcester Polytechnic Institute with
+			a major in computer science and a minor in data science. Although I do have a formal CS
+			college education, I started learning programming and general advanced computer skills on my own in
+			high school, starting with C++. Since then I've been tinkering about with just about
+			everything I can get my hands on, from systems programming and networking to data
+			visualization and web development. In recent years I've branched out into more artistic
+			works, including some of the above 3D modeling work and fancily-typeset documents in
+			LaTeX.</p>
+
+		<h2>Current Activities</h2>
+
+		<p>I have a few personal projects I enjoy working on, such as my
+			<a [routerLink]="['/personal/programs']">"Deuterium" project</a>, this website, or some data analysis
+			&amp; visualization work. I'm also usually busy baking stuff throughout the week, among other ongoings of
+			daily life.</p>
+
+		<p>When I'm not working on personal projects, I'm sometimes busy working for WPI's "Beecology" project. In my
+			down
+			time I can often be found playing one of a variety of videogames, mostly focused on strategy, open-world
+			survival, space &amp; engineering, or role-playing.</p>
+	</div>
+</div>

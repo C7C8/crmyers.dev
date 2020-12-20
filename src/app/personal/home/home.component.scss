@@ -1,0 +1,38 @@
+.content-container {
+  display: grid;
+  grid-template-areas:
+        "intro carousel carousel"
+        "photo carousel carousel"
+        "photo history history";
+  grid-template-rows: 18em 18em 24em;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-gap: 2em;
+
+  .caption {
+	margin-top: 0.2em;
+	opacity: 0.3;
+	font-size: 0.7em;
+  }
+
+  .intro {
+	grid-area: intro;
+  }
+
+  .carousel {
+	grid-area: carousel;
+	min-height: 100%;
+  }
+
+  .photo {
+	grid-area: photo;
+
+	img {
+	  max-width: 100%;
+	  clear: both;
+	}
+  }
+
+  .history {
+	grid-area: history;
+  }
+}

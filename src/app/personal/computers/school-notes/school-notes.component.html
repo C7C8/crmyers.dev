@@ -1,0 +1,90 @@
+<div class="normal-content">
+    <h1>University Notes &amp; Major Projects</h1>
+
+    <p>
+        I have a <span matTooltip="Spatial dysgraphia and developmental coordination disorder" matTooltipShowDelay="1500" matTooltipPosition="before">pair of conditions</span>
+        that affect my handwriting; for me, writing a sentence is like doing 5 finger lifts of a heavy textbook, and
+        my writing is always sloppy &amp; cramped. While this definitely nudged me in the direction of computers, it made
+        taking notes &mdash; especially math &mdash; extremely difficult and painful. With handwriting I can't keep up
+        with professors and the pain is a serious distraction. During the first few weeks of my first term of university,
+        I got C's and D's on all my Calculus III quizzes because I couldn't learn effectively.
+    </p>
+    <p>
+        Fortunately, I was able to figure out a way around it! I learned <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>
+        specifically so I could take math notes, and augmented Vim with various plugins for autocomplete, templating,
+        and live previews of the code I was writing. Since my typing ability is unaffected (and I'm a fast typist)
+        I started live-TeX-ing my notes out in class and was able to keep up. My grades rose, my pain went away, and
+        now I have a library of notes to share.
+    </p>
+
+    <mat-divider></mat-divider>
+
+    <p>
+        The below does not represent all the courses that I took at WPI, for some <span matTooltip="Don't judge me, ok? Some classes were easier than others!">
+        I never took notes for</span>, while for others the notes aren't in good enough quality to share. You can browse
+        through them all by subject here with a PDF preview in-browser; a download button is below if you want an offline
+        copy of the document.
+    </p>
+
+    <div class="document-viewer">
+
+        <!-- PDF viewer and controls -->
+        <mat-card class="viewer">
+            <mat-card-header>
+                <mat-card-title>
+                        <span>{{currentDocument.number}} &mdash; <em>{{currentDocument.title}}</em></span>
+                        <span class="filler"></span>
+                        <a download [href]="basePath + currentDocument.path" mat-raised-button color="primary">Download</a>
+                </mat-card-title>
+                <mat-card-subtitle *ngIf="currentDocument.cGrade">
+                    <span>Warning: When taking this class, I earned a C. These notes should still be of okay quality, but
+                    don't rely on them completely.</span>
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <ngx-extended-pdf-viewer [src]="basePath + currentDocument.path"
+                                         useBrowserLocale="true"
+                                         height="100vh">
+                </ngx-extended-pdf-viewer>
+            </mat-card-content>
+
+        </mat-card>
+
+        <!-- File tree navigator -->
+        <mat-card class="tree">
+            <mat-card-header>
+                <mat-card-title>Select Document</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+                    <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
+                        <mat-divider *ngIf="!!node.documents"></mat-divider>
+                        <li>
+                            <div class="mat-tree-node">
+                                <span *ngIf="!!node.documents">
+                                    <button mat-icon-button
+                                            matTreeNodeToggle
+                                            [attr.aria-label]="'toggle' + node.title">
+                                        <mat-icon class="mat-icon-rtl-mirror">
+                                            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                                        </mat-icon>
+                                    </button>
+                                    {{node.title}}
+                                </span>
+
+                                <span class="document-title" *ngIf="!node.documents">
+                                    <button mat-button (click)="switchDocument(node)" class="document-button">
+                                        {{node.number}} <em>{{node.title}}</em>
+                                    </button>
+                                </span>
+                            </div>
+                            <ul [class.tree-invisible]="!treeControl.isExpanded(node)">
+                                <ng-container matTreeNodeOutlet></ng-container>
+                            </ul>
+                        </li>
+                    </mat-nested-tree-node>
+                </mat-tree>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

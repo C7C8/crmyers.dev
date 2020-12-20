@@ -1,6 +1,7 @@
 {
   "extends": "tslint:recommended",
   "rules": {
+	"indent": [ true, "tabs", 4 ],
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {
@@ -86,6 +87,6 @@
     "use-pipe-transform-interface": true
   },
   "rulesDirectory": [
-    "codelyzer"
+    "node_modules/codelyzer"
   ]
 }

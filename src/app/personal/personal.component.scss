@@ -1,0 +1,53 @@
+mat-toolbar {
+    margin-bottom: 1.5em;
+
+    .header-title {
+        font-family: DotMatrix, sans-serif;
+        font-weight: bold;
+        font-size: 2em;
+        text-decoration: none;
+        color: #00b300;
+        padding-right: 1em;
+    }
+}
+
+button, a {
+    font-family: Lalezar, sans-serif;
+    font-size: 1em;
+}
+
+.content-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .content {
+        flex: 1 0 auto;
+        padding: 0 2%;
+    }
+
+    footer {
+        flex-shrink: 0;
+        text-align: center;
+        margin-top: 5em;
+        margin-bottom: 2.5em;
+        color: #888;
+        font-size: 0.75em;
+
+        a {
+            color: #888;
+        }
+
+        img {
+            filter: invert(100%);
+            max-width: 4em;
+            margin: auto 1em;
+            opacity: 0.4;
+        }
+
+        p {
+            opacity: 0.4;
+            margin-top: 0;
+        }
+    }
+}

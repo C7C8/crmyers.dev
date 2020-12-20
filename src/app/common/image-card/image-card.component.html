@@ -1,0 +1,25 @@
+<mat-card (click)="showDetails()">
+	<mat-card-header>
+		<mat-card-title>{{title}}</mat-card-title>
+		<mat-card-subtitle *ngIf="date" class="date">{{date}}</mat-card-subtitle>
+	</mat-card-header>
+
+	<img mat-card-image [src]="img" [alt]="img">
+
+	<mat-card-content>
+		<p class="caption">
+			<ng-content select="picture-caption"></ng-content>
+		</p>
+	</mat-card-content>
+</mat-card>
+
+<ng-template #imageDetailDialog class="dialog">
+	<h1 matDialogTitle>{{title}}</h1>
+	<div class="container" fxLayout="column" fxLayoutGap="0.25em grid" fxLayoutAlign="space-between">
+		<img [src]="img" [alt]="img" fxFlex="nogrow">
+		<ng-content select="picture-description"></ng-content>
+		<div style="text-align: right">
+			<button mat-raised-button mat-dialog-close color="primary">Close</button>
+		</div>
+	</div>
+</ng-template>

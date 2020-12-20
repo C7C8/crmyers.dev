@@ -1,0 +1,45 @@
+<mat-toolbar>
+    <a [routerLink]="['/personal']"
+       class="header-title"
+       matTooltip="Is it clich&eacute;d? Yup. Does it look cool? Yup."
+       matTooltipShowDelay="1500">
+        || CRMYERS.DEV ||
+    </a>
+
+    <!-- Computer stuff menu -->
+    <button mat-button [matMenuTriggerFor]="computerMenu">Computers &amp; Code</button>
+    <mat-menu #computerMenu="matMenu">
+        <button mat-menu-item [routerLink]="['/personal/computers/programs']">Programs</button>
+        <button mat-menu-item [routerLink]="['/personal/computers/webdev']">Web Development</button>
+        <button mat-menu-item [routerLink]="['/personal/computers/ricing']">*NIX Ricing</button>
+        <button mat-menu-item [routerLink]="['/personal/computers/university-notes']">University Notes &amp; Major Projects</button>
+    </mat-menu>
+
+    <!--Art stuff menu -->
+    <button mat-button [matMenuTriggerFor]="artMenu">Hobbies, Art, 'n' Stuff</button>
+    <mat-menu #artMenu>
+        <button mat-menu-item [routerLink]="['/personal/hobbies/latex']"><span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> Stuff</button>
+        <button mat-menu-item [routerLink]="['/personal/hobbies/blender']">Blender Renders</button>
+        <button mat-menu-item [routerLink]="['/personal/hobbies/cooking']">Cooking &amp; Baking</button>
+        <button mat-menu-item [routerLink]="['/personal/hobbies/gardening']">Gardening</button>
+    </mat-menu>
+
+    <!-- Game stuff menu -->
+    <button mat-button [routerLink]="['/personal/travel']">Travel photos</button>
+    <button mat-button [routerLink]="['/personal/interesting-stuff']">Interesting Links &amp; Stuff I Like</button>
+    <button mat-button [routerLink]="['/personal/contact']">Contact</button>
+</mat-toolbar>
+
+<div class="content-container">
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+
+    <footer>
+        <a [href]="window.location.origin"><img src="/assets/img/gtva.png" alt="gtva logo"/></a>
+        <a href="https://github.com/c7c8/crmyers.dev"><img src="/assets/img/gh-logo.png" alt="github logo" matTooltip="My page on GitHub"/></a>
+        <p><em>Copyright &copy; 2019-{{year()}} Christopher Myers. Site code available under the GNU Affero General Public License, individual works on display may differ.
+            <b><a href="https://github.com/c7c8/crmyers.dev/issues/new">Report a bug</a></b></em>
+        </p>
+    </footer>
+</div>

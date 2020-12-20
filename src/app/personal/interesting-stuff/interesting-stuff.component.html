@@ -1,0 +1,29 @@
+<div class="normal-content">
+    <h1>Interesting Links &amp; Stuff I Like</h1>
+	<p>This is just a big list of links that I've enjoyed. It's a pretty eclectic collection, it's just a dump of a few
+		things in my browser's bookmarks folders. Browse around and check stuff out, you might find something neat!</p>
+
+	<p>Alternatively, click the button below to be taken to a random link!</p>
+
+	<div class="button-container">
+		<button mat-raised-button color="warn"
+				matTooltip="YOU KNOW YOU WANT TO"
+				matTooltipPosition="above"
+				matTooltipShowDelay="2000"
+				(click)="randomLink()">
+			Take me to a random link!</button>
+	</div>
+
+	<div class="links-grid">
+		<mat-card *ngFor="let category of linkCategories">
+			<mat-card-header>
+				<mat-card-title>{{category.name}}</mat-card-title>
+			</mat-card-header>
+			<mat-card-content>
+				<ul>
+					<li *ngFor="let link of category.links"><a [href]="link.href">{{link.text}}</a></li>
+				</ul>
+			</mat-card-content>
+		</mat-card>
+	</div>
+</div>

@@ -1,0 +1,23 @@
+<div class="carousel-container">
+	<ngu-carousel #carousel [inputs]="carouselConfig" [dataSource]="images">
+		<ngu-item NguCarouselItem *nguCarouselDef="let item;">
+			<img [src]="item.image" [alt]="item.alt"/>
+			<div class="caption"><em>{{item.caption}}</em></div>
+		</ngu-item>
+
+		<button NguCarouselPrev hidden #prev></button>
+		<button NguCarouselNext hidden #next></button>
+	</ngu-carousel>
+	<ul class="carousel-point" NguCarouselPoint>
+		<li *ngFor="let j of carousel.pointNumbers" [class.active]="j==carousel.activePoint"
+			(click)="carousel.moveTo(j)"></li>
+	</ul>
+	<div class="carousel-buttons">
+		<button mat-icon-button (click)="prev.click()">
+			<mat-icon [inline]="true">keyboard_arrow_left</mat-icon>
+		</button>
+		<button mat-icon-button (click)="next.click()">
+			<mat-icon [inline]="true">keyboard_arrow_right</mat-icon>
+		</button>
+	</div>
+</div>

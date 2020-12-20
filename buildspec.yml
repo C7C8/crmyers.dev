@@ -9,7 +9,8 @@ phases:
       - npm install
   build:
     commands:
-      - npm run-script build && aws cloudfront create-invalidation --distribution-id=E2PWCOBIBVVDR1 --paths '/*'
+      - npm run-script build &&
+      - aws cloudfront create-invalidation --distribution-id=E2PWCOBIBVVDR1 --paths '/*'
 artifacts:
   files:
     - ./*

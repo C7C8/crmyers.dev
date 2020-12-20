@@ -1,0 +1,35 @@
+<mat-expansion-panel *ngIf="shown" [expanded]="false" (closed)="pauseVideo()">
+	<mat-expansion-panel-header>
+		<mat-panel-title>
+			{{name}}
+			<span *ngIf="year" class="year">{{year}}</span>
+		</mat-panel-title>
+		<mat-panel-description *ngIf="tags">
+			<mat-chip-list>
+				<mat-chip *ngFor="let tag of tags">{{tag}}</mat-chip>
+			</mat-chip-list>
+		</mat-panel-description>
+	</mat-expansion-panel-header>
+
+	<ng-template matExpansionPanelContent>
+		<div class="media-container" *ngIf="video">
+			<video #vid [src]="video" controls></video>
+		</div>
+
+		<div class="media-container">
+			<img *ngIf="image" [src]="image" [alt]="name +'image preview'"/>
+		</div>
+
+		<ng-content></ng-content>
+	</ng-template>
+
+	<mat-action-row *ngIf="github || link">
+		<a mat-mini-fab *ngIf="link" [matTooltip]="'View online at ' + link" [href]="link">
+			<mat-icon [inline]="true">link</mat-icon>
+		</a>
+		<a mat-icon-button *ngIf="github" [matTooltip]="'View on GitHub at ' + github"
+		   [href]="'https://github.com/' + github">
+			<img src="/assets/img/gh-logo.png" alt="GH logo">
+		</a>
+	</mat-action-row>
+</mat-expansion-panel>

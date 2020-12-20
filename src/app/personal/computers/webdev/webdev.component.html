@@ -1,0 +1,126 @@
+<div class="normal-content">
+<h1>Web Development</h1>
+
+<!-- year()-2018 as a years counter has got to be the most fantastically lazy way I've ever made for avoiding having to update a site. -->
+<p>
+    Web development is something I took up much later than the rest of my programming talents, about {{year() - 2018}}
+    years ago starting in spring 2018 with some basic Angular and Python Flask for an application I wanted to build.
+    I've been hacking away with it ever since, working on one project after another in slow succession. I've picked up on
+    some other technologies along the way, experimenting with Webpack and Vue and other libraries and frameworks,
+    but mostly I stick to basic Angular and my own SCSS. I like to keep a <em>small</em> <code> node_modules</code>,
+    thank you very much!
+</p>
+
+<p>
+    All of these applications can be found on my GitHub profile at <a href="https://github.com/c7c8">github.com/c7c8</a>,
+    all under the Affero GPLv3. That means you're more than welcome to use my code &mdash; in fact, I encourage it!
+    I wouldn't be where I am today without a plethora of open-source code to learn from and use as examples, so it's
+    my pleasure to give back. I do request that if you distribute a modified version of my work or host a modified
+    version elsewhere that you distribute the source code under the same license (the license has more information on
+    that), in the spirit of similarly giving back to the programming community.
+</p>
+
+<p>
+    <em>Looking for <a [routerLink]="['/personal/computers/programs']">programs</a> instead?</em>
+</p>
+
+<content-list-searchable>
+    <content-entry name="Eilat Transportation Website"
+                   github="c7c8/Eilat-Transport-Map-Site"
+                   year="2019"
+                   [tags]="['Data viz', 'MySQL', 'GCP', 'College']"
+                   image="/assets/personal/code-projects/eilat-transport.png">
+        <p>
+            This website was a group collaboration as part of my IQP (Interactive Qualifying Project) at Worcester
+            Polytechnic Institute. I was responsible for the UI and flights code, while my partner-in-code was
+            responsible for the backend portion that fetched live bus locations from Israel's ministry of transportation
+            (a task that turned out to be incredibly difficult!).
+        </p>
+
+        <p>
+            The goal of the website was to display data that might be useful in helping Eilat, Israel city planners in
+            figuring out how to improve city transportation. The site pulls data from the aforementioned ministry of
+            transport servers on live bus locations, various traffic and topological data from Google Cloud Platform,
+            and queries flights flying in and out of the region from an API provided by FlightStats.
+        </p>
+
+        <p>
+            Since we no longer have access to the ministry of transportation data and we ran out of free usage on the
+            FlightStats API, the site is no longer online, but you can view the source for the website at the link below,
+            and the source for the server <a href="https://github.com/c7c8/Eilat-Transport-Map-Server">here</a>.
+        </p>
+    </content-entry>
+
+    <content-entry name="Twittalyzer"
+                   github="c7c8/Twitter-Analysis-Site"
+                   year="2018"
+                   [tags]="['Data viz', 'MySQL', 'College']"
+                   image="/assets/personal/code-projects/twittalyzer.png">
+        <p>
+            Inspired by controversies erupting over usage of Twitter, <b>"Twittalyzer"</b> is a web app that implements
+            simple scraping of a user's tweets, which it runs basic statistics on, generates random tweets from that user
+            by constructing and using a Markov chain, performs VADER sentiment analysis, and plots usage + sentiment
+            on a heatmap. In between runs it caches scraped tweets and generated markov chains in a MySQL database, so
+            it doesn't have to re-run the whole scraping &amp; analyzing routine. The heatmaps were created using processed
+            data served up by a python Flask API I wrote to do the data crunching, and drawn with D3. They're pretty
+            primitive, but they get the point across!
+        </p>
+
+        <p>
+            <em>You can find the code for the website at the link below, and the server side API + data analysis code
+            <a href="https://github.com/c7c8/Twitter-Analysis-Server">here</a>.</em>
+        </p>
+    </content-entry>
+
+    <content-entry name="Secret 31"
+                   github="c7c8/Secrets-Site"
+                   year="2018"
+                   [tags]="['Cryptography', 'MySQL', 'College']"
+                   image="/assets/personal/code-projects/secret-31.png">
+
+        <p>
+            <b>Secret 31</b> is a simple website for allowing two people to confirm they each know something while never
+            directly exchanging that information. Basically, one person inputs some string of keywords and submits it;
+            the server spits out a unique ID in response. They give that ID to the second person, who enters their set of
+            keywords and submits alongside the code. The server responds with a brief analysis of the text submitted by each
+            person, which they can use to determine if they submitted the same things. This scheme is perfect for the
+            person who thinks someone else knows something secret, but can't confirm it without sharing the private
+            information in the first place.
+        </p>
+
+        <p>
+            Secrets are encrypted using the ID returned to the first user using 128-bit CBC AES, and are matched
+            together using the bcrypt hash of that same ID. In effect there's no way to recover secrets on the server
+            unless you have the right key. Once the second secret is submitted and the analysis requested, all information
+            related to those secrets is immediately destroyed, preventing the first user from learning the second's
+            secrets.
+        </p>
+
+        <p>You can find the code for the website at the link below; the more interesting server side API can be found
+        <a href="https://github.com/c7c8/secrets-server">here</a>.</p>
+    </content-entry>
+
+    <content-entry name="CS 3733 API Repository"
+                   github="c7c8/SoftEng-API-Site"
+                   year="2018"
+                   link="https://apisite.crmyers.dev"
+                   [tags]="['AWS', 'CRUD', 'Users']"
+                   image="/assets/personal/code-projects/apisite.png">
+        <p>
+            The <b>API Repository</b> site (a misnomer carried over from the language used in-class) hosts a Maven
+            repositories for students in CS 3733 Software Engineering at Worcester Poyltechnic Institute to submit Java
+            libraries they write as part of the course. This makes it easier for students to use each others' libraries
+            (a requirement of the class project).
+            Users only need to create an account in order to begin submitting their libraries. Libraries are displayed
+            as cards with a preview image, installation information, and a textual description (rendered from markdown
+            supplied by the submitting user).
+        </p>
+
+        <p>
+            The site is powered by python Flask on the back end and Angular on the front end. Originally the server
+            used MySQL as a database, but, since the physical server I used to host it was stolen, I migrated the
+            entire site over to Amazon Web Services (AWS), where for cost reasons it now uses DynamoDB.
+        </p>
+    </content-entry>
+</content-list-searchable>
+</div>

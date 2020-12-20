@@ -1,0 +1,41 @@
+mat-expansion-panel {
+  margin-top: 0.5em;
+}
+
+.dough-calculator {
+
+  .base-mixture {
+	display: flex;
+
+	.filler {
+	  flex-grow: 1;
+	}
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+  }
+
+  input[type=number] {
+	-moz-appearance: textfield;
+  }
+
+  .levain-hydration {
+	width: 9em;
+  }
+
+  .dough-mass {
+	width: 5.5em;
+	margin-right: 1em;
+  }
+
+  .percent-field {
+	width: 3em;
+  }
+
+  table {
+	width: 100%;
+  }
+}

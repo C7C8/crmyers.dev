@@ -1,0 +1,14 @@
+aside {
+  font-size: 0.7em;
+}
+
+.gpg {
+  float: right;
+  min-width: 30em;
+
+  pre {
+	height: auto;
+	max-height: 200px;
+	overflow: auto;
+  }
+}

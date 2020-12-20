@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+@import "theme-blue.scss";
+
+html, body {
+    height: 100%;
+    font-size: 1em !important; // wat?
+}
+pre, code {
+    font-family: Inconsolata, monospace;
+}
+
+h1 {
+    font-size: 2.5em !important;
+}
+
+h2 {
+    margin-bottom: 0.25em !important;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+a {
+    color: #207edf;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+// F**k you, ngu-carousel! WHY do you need this?!
+.ngu-touch-container {
+    height: 100%;
+}
+
+// Stuff for the LaTeX logo
+.tex sub, .latex sub, .latex sup {
+    text-transform: uppercase;
+}
+
+.tex sub, .latex sub {
+    vertical-align: -0.5ex;
+    margin-left: -0.1667em;
+    margin-right: -0.125em;
+}
+
+.tex, .latex, .tex sub, .latex sub {
+    font-size: 1em;
+}
+
+.latex sup {
+    font-size: 0.85em;
+    vertical-align: 0.15em;
+    margin-left: -0.36em;
+    margin-right: -0.15em;
+}
+
+.normal-content {
+    max-width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+mat-panel-title {
+  font-family: Lalezar, sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: auto;
+}

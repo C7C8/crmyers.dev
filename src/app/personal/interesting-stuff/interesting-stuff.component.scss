@@ -1,0 +1,10 @@
+.links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.button-container {
+  margin: 1em;
+  text-align: center;
+}
