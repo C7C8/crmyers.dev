@@ -43,7 +43,6 @@ import { MassVolumeConverterComponent } from './hobbies/cooking/mass-volume-conv
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
-import { GamesComponent } from './games/games.component';
 
 
 @NgModule({
@@ -67,7 +66,6 @@ import { GamesComponent } from './games/games.component';
 		SchoolNotesComponent,
 		DoughCalculatorComponent,
 		MassVolumeConverterComponent,
-		GamesComponent,
 	],
 	imports: [
 		CommonModule,

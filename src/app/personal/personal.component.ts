@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-personal',
-    templateUrl: './personal.component.html',
-    styleUrls: ['./personal.component.scss']
+	selector: 'app-personal',
+	templateUrl: './personal.component.html',
+	styleUrls: ['./personal.component.scss']
 })
 export class PersonalComponent implements OnInit {
-    window: any = window;
+	window: any = window;
 
-    constructor() {}
+	constructor() {}
 
-    ngOnInit() {
-    }
+	ngOnInit() {
+	}
 
-    year(): number {
-        return (new Date()).getFullYear();
-    }
+	year(): number {
+		return (new Date()).getFullYear();
+	}
 }

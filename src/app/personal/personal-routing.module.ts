@@ -13,7 +13,6 @@ import { TravelComponent } from './travel/travel.component';
 import { InterestingStuffComponent } from './interesting-stuff/interesting-stuff.component';
 import { GardeningComponent } from './hobbies/gardening/gardening.component';
 import { SchoolNotesComponent } from './computers/school-notes/school-notes.component';
-import { GamesComponent } from './games/games.component';
 
 const routes: Routes = [
 	{
@@ -27,7 +26,6 @@ const routes: Routes = [
 					{ path: 'university-notes', component: SchoolNotesComponent },
 				]
 			},
-			{ path: 'games', component: GamesComponent },
 			{
 				path: 'hobbies', children: [
 					{ path: 'latex', component: LatexComponent },
